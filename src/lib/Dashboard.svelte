@@ -1,17 +1,15 @@
 <script>
   import { Row, Col, Container } from "sveltestrap";
   import WelcomeText from "./WelcomeText.svelte";
-  import { orgs as allOrgs } from "../data/data";
+  import { orgs } from "../stores";
   import CardView from "./CardView.svelte";
   import FilterContainer from "./FilterContainer.svelte";
-
-  let orgs = allOrgs();
 </script>
 
 <Row>
   <Col>
     <WelcomeText />
     <FilterContainer />
-    <CardView {orgs} />
+    <CardView orgs={$orgs} />
   </Col>
 </Row>

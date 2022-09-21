@@ -1,15 +1,13 @@
-<script lang="ts">
-  import { localOnlyState } from "../stores";
-  import { sports } from "../data/data";
+<script>
+  import { localOnlyFilter } from "../stores";
 
   const toggleLocalOnly = () => {
-    localOnlyState.update((val) => !val);
+    localOnlyFilter.update((val) => !val);
   };
 </script>
 
 Local only: <input
   type="checkbox"
-  checked={$localOnlyState}
+  checked={$localOnlyFilter}
   on:change={toggleLocalOnly}
 />
-{sports}
