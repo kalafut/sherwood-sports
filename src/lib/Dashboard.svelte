@@ -1,7 +1,7 @@
 <script>
   import { Row, Col, Container } from "sveltestrap";
   import WelcomeText from "./WelcomeText.svelte";
-  import { orgs } from "../stores";
+  import { filteredOrgs } from "../stores";
   import CardView from "./CardView.svelte";
   import FilterContainer from "./FilterContainer.svelte";
 </script>
@@ -10,6 +10,6 @@
   <Col>
     <WelcomeText />
     <FilterContainer />
-    <CardView orgs={$orgs} />
+    <CardView orgs={$filteredOrgs} />
   </Col>
 </Row>

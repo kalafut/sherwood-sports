@@ -21,7 +21,7 @@ function filterOrgPrograms(org: Org, filters: ProgramFilter[]): Org {
 
 // filterOrgs returns a list of Orgs with a filtered list
 // of programs.
-export function filteredOrgs(
+export function filteredOrgsFn(
   orgs: Org[],
   orgFilters: OrgFilter[],
   programFilters: ProgramFilter[]

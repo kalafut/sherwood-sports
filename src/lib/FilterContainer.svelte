@@ -12,6 +12,7 @@
     Button,
   } from "sveltestrap";
   import LocalOnlyFilter from "./LocalOnlyFilter.svelte";
+  import SportsFilter from "./SportsFilter.svelte";
 
   let isOpen = false;
   const toggleOpen = () => {
@@ -28,7 +29,7 @@
         <CardBody>
           <TabContent>
             <TabPane tabId="sports" tab="Sports" active>
-              SportFilter
+              <SportsFilter />
               <!-- <SportFilter {sports} /> -->
             </TabPane>
             <TabPane tabId="age" tab="Age">

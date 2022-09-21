@@ -2,6 +2,8 @@ export interface AgeRange {
   min: number;
   max: number;
 }
+export type ProgramFilter = (p: Program) => boolean;
+export type OrgFilter = (o: Org) => boolean;
 
 export interface Program {
   name: string;
