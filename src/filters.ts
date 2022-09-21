@@ -33,10 +33,8 @@ export function filteredOrgsFn(
   return newOrgs;
 }
 
-export function ageFunctionalFilter(program: Program): boolean {
-  const minAge = 2; //useStore.getState().minAge;
-  const maxAge = 18; //useStore.getState().maxAge;
-
+export function ageFunctionalFilter(program: Program, ageRange): boolean {
+  const { min, max } = ageRange;
   const effectiveAgeMin =
     program.ageMin ||
     (program.gradeMin && gradeToAge(program.gradeMin, false)) ||
@@ -46,7 +44,7 @@ export function ageFunctionalFilter(program: Program): boolean {
     (program.gradeMax && gradeToAge(program.gradeMax, true)) ||
     consts.MAX_FILTER_AGE;
 
-  return effectiveAgeMax >= minAge && effectiveAgeMin <= maxAge;
+  return effectiveAgeMax >= min && effectiveAgeMin <= max;
 }
 
 export function localOnlyFilter(org: Org, localOnly: boolean): boolean {

@@ -11,11 +11,13 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.2",
     "svelte": "^3.49.0",
+    "svelte-range-slider-pips": "^2.0.3",
     "vite": "^3.1.0"
   },
   "dependencies": {
     "immutable": "^4.1.0",
     "lodash": "^4.17.21",
+    "object-hash": "^3.0.0",
     "svelte-preprocess": "^4.10.7",
     "sveltestrap": "^5.9.0"
   }

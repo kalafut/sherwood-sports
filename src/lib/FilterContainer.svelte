@@ -11,6 +11,7 @@
     TabContent,
     Button,
   } from "sveltestrap";
+  import AgeFilter from "./AgeFilter.svelte";
   import LocalOnlyFilter from "./LocalOnlyFilter.svelte";
   import SportsFilter from "./SportsFilter.svelte";
 
@@ -30,11 +31,9 @@
           <TabContent>
             <TabPane tabId="sports" tab="Sports" active>
               <SportsFilter />
-              <!-- <SportFilter {sports} /> -->
             </TabPane>
             <TabPane tabId="age" tab="Age">
-              Age Range
-              <!-- <AgeRangeSlider /> -->
+              <AgeFilter />
             </TabPane>
             <TabPane tabId="season" tab="Location">
               <LocalOnlyFilter />

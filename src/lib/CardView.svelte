@@ -20,6 +20,7 @@
   import { flush } from "svelte/internal";
   import Season from "./Season.svelte";
   import AgeBadge from "./AgeBadge.svelte";
+  import hash from "object-hash";
 
   export let orgs;
 
@@ -27,7 +28,7 @@
 </script>
 
 <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-  {#each orgs as org}
+  {#each orgs as org (hash(org))}
     <Col>
       <Card>
         <CardBody>
@@ -41,7 +42,7 @@
           </CardTitle>
           <CardText>Some intro text about the organization.</CardText>
           <ListGroup flush>
-            {#each org.programs as program}
+            {#each org.programs as program (hash(program))}
               <ListGroupItem
                 color={isUpcoming(m, program.season) ? "warning" : ""}
                 class="d-flex align-items-start justify-content-between"
