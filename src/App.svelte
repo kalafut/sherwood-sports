@@ -4,6 +4,10 @@
   import { Button, Col, Container, Row } from "sveltestrap";
   import LocalOnlyFilter from "./lib/LocalOnlyFilter.svelte";
   import Dashboard from "./lib/Dashboard.svelte";
+  import NavBar from "./lib/NavBar.svelte";
+  import About from "./lib/About.svelte";
+
+  import { page } from "./stores";
 </script>
 
 <svelte:head>
@@ -14,7 +18,14 @@
 </svelte:head>
 
 <main>
-  <Container><Dashboard /></Container>
+  <Container>
+    <NavBar />
+    {#if $page == "about"}
+      <About />
+    {:else}
+      <Dashboard />
+    {/if}
+  </Container>
 </main>
 
 <style>
