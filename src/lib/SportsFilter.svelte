@@ -1,6 +1,6 @@
 <script>
   import { sportsFilter } from "../stores";
-  import { sports } from "../data/data";
+  import { sports } from "../data";
 
   const toggleSport = (sport) => {
     sportsFilter.update((v) => {

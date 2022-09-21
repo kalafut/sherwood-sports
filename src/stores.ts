@@ -4,7 +4,7 @@ import {
   ageFunctionalFilter,
   seasonFunctionalFilter,
 } from "./filters";
-import { orgs as allOrgs, sports } from "./data/data";
+import { orgs as allOrgs, sports } from "./data";
 import { localOnlyFilter as lof } from "./filters";
 import { ProgramFilter, OrgFilter } from "./types";
 import { Org, Program } from "./types";
@@ -36,6 +36,6 @@ export const filteredOrgs = derived(
       (program: Program) => seasonFunctionalFilter(program, $seasonFilter),
     ];
 
-    return filteredOrgsFn(allOrgs(), orgFilters, programFilters);
+    return filteredOrgsFn(allOrgs, orgFilters, programFilters);
   }
 );

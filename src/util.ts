@@ -48,7 +48,7 @@ export function monthStr(monthNum: number) {
 }
 
 export function currentMonth() {
-  return consts.FEB;
+  //return consts.FEB;
   return new Date().getMonth() + 1;
 }
 
