@@ -68,6 +68,28 @@ export function monthInSeason(month: number, season: string) {
   return monthInRange(month, seasons[season]);
 }
 
+export class ImmutableStringSet {
+  private set: Set<string>;
+
+  constructor(init: string[]) {
+    this.set = new Set<string>(init);
+  }
+
+  has(v: string): boolean {
+    return this.set.has(v);
+  }
+
+  add(v: string): ImmutableStringSet {
+    this.set.add(v);
+    return new ImmutableStringSet(Array.from(this.set.values()));
+  }
+
+  delete(v: string): ImmutableStringSet {
+    this.set.delete(v);
+    return new ImmutableStringSet(Array.from(this.set.values()));
+  }
+}
+
 export function isUpcoming(
   month: number,
   season: number[] | undefined
