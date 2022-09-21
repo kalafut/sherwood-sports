@@ -1,5 +1,7 @@
 import { Org, Program } from "./types";
 import * as consts from "./consts";
+import { monthInSeason } from "./util";
+import _ from "lodash";
 
 type ProgramFilter = (p: Program) => boolean;
 type OrgFilter = (o: Org) => boolean;
@@ -67,4 +69,11 @@ export function sportsFilter(org: Org): boolean {
   const sportsFilter = new Set(); //useStore.getState().sportsFilter;
 
   return sportsFilter.has(org.sport);
+}
+
+export function seasonFunctionalFilter(program: Program, seasons) {
+  return _.some(
+    seasons,
+    (val, key) => val && program.season && monthInSeason(program.season[0], key)
+  );
 }

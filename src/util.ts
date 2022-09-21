@@ -17,7 +17,14 @@ const monthStrConv: numStrConv = {
   9: "Sep",
   10: "Oct",
   11: "Nov",
-  12: "Dev",
+  12: "Dec",
+};
+
+const seasons = {
+  winter: [12, 2],
+  spring: [3, 5],
+  summer: [6, 8],
+  fall: [9, 11],
 };
 
 // courtesy of: https://stackoverflow.com/a/13627586
@@ -55,6 +62,10 @@ export function monthInRange(month: number, [start, end]: number[]) {
   }
 
   return start <= month && month <= end;
+}
+
+export function monthInSeason(month: number, season: string) {
+  return monthInRange(month, seasons[season]);
 }
 
 export function isUpcoming(

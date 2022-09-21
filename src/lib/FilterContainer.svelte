@@ -10,9 +10,12 @@
     TabPane,
     TabContent,
     Button,
+    Row,
+    Col,
   } from "sveltestrap";
   import AgeFilter from "./AgeFilter.svelte";
   import LocalOnlyFilter from "./LocalOnlyFilter.svelte";
+  import SeasonFilter from "./SeasonFilter.svelte";
   import SportsFilter from "./SportsFilter.svelte";
 
   let isOpen = false;
@@ -35,10 +38,16 @@
             <TabPane tabId="age" tab="Age">
               <AgeFilter />
             </TabPane>
-            <TabPane tabId="season" tab="Location">
-              <LocalOnlyFilter />
+            <TabPane tabId="season" tab="Location & Season">
+              <Row>
+                <Col>
+                  <LocalOnlyFilter />
+                </Col>
+                <Col>
+                  <SeasonFilter />
+                </Col>
+              </Row>
             </TabPane>
-            <!-- {toggleButton} -->
           </TabContent>
           <Button on:click={toggleOpen}>Filter</Button>
         </CardBody>
@@ -46,24 +55,3 @@
     </div>
   </Collapse>
 {/if}
-
-<!-- <TabContent pills>
-  <TabPane tabId="alpha" tab="Alpha" active>
-    <img
-      alt="Alpha Flight"
-      src="https://upload.wikimedia.org/wikipedia/en/4/49/Alpha_Flight_cast_picture_%28John_Byrne_era%29.gif"
-    />
-  </TabPane>
-  <TabPane tabId="bravo" tab="Bravo">
-    <img
-      alt="Johnny Bravo"
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Johnny_Bravo_series_logo.png/320px-Johnny_Bravo_series_logo.png"
-    />
-  </TabPane>
-  <TabPane tabId="charlie" tab="Charlie" disabled>
-    <img
-      alt="Charlie Brown"
-      src="https://upload.wikimedia.org/wikipedia/en/2/22/Charlie_Brown.png"
-    />
-  </TabPane>
-</TabContent> -->

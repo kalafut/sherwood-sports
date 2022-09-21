@@ -25,3 +25,10 @@ export const MIN_FILTER_AGE = 2,
 // and no programs in the source data. It makes life easier for development but maybe
 // using a great long term solution.
 export const NO_PROGRAMS = [];
+
+export const INITIAL_SEASON_FILTER = {
+  summer: true,
+  spring: true,
+  fall: true,
+  winter: true,
+};
