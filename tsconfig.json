@@ -17,5 +17,6 @@
     "outDir": "./dist"
   },
   "compileOnSave": true,
-  "include": ["."]
+  "include": ["."],
+  "files": ["node_modules/jest-expect-message/types/index.d.ts"]
 }

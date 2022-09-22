@@ -1,5 +1,5 @@
 import * as consts from "./consts";
-import { Org, OrgList } from "./types";
+import type { OrgList } from "./types";
 
 const LACROSSE = "Lacrosse",
   BASKETBALL = "Basketball",

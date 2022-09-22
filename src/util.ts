@@ -32,7 +32,14 @@ const seasons: SeasonRange = {
 };
 
 // courtesy of: https://stackoverflow.com/a/13627586
-export function ordinal(i: number) {
+export function ordinal(i: number | undefined) {
+  if (i === undefined) {
+    return;
+  }
+  if (i == 0) {
+    return "K";
+  }
+
   var j = i % 10,
     k = i % 100;
   if (j === 1 && k !== 11) {
@@ -146,4 +153,73 @@ export function ageStr(program: Program) {
   }
 
   return ret;
+}
+
+type NumberMaybe = number | undefined;
+
+function gradeRangeStr(gradeMin: NumberMaybe, gradeMax: NumberMaybe): string {
+  let text = "";
+  const hasMin = gradeMin !== undefined;
+  const hasMax = gradeMax !== undefined;
+
+  if (hasMin && hasMax) {
+    if (gradeMin == gradeMax) {
+      text = `${ordinal(gradeMin)}`;
+    } else {
+      text = `${ordinal(gradeMin)}–${ordinal(gradeMax)}`;
+    }
+  } else if (hasMax) {
+    if (gradeMax == 0) {
+      text = "K";
+    } else {
+      text = `K–${ordinal(gradeMax)}`;
+    }
+  } else if (hasMin) {
+    text = `${ordinal(gradeMin)}+`;
+  }
+  return text;
+}
+
+function ageRangeStr(ageMin: NumberMaybe, ageMax: NumberMaybe): string {
+  let text = "";
+
+  const hasMin = ageMin !== undefined;
+  const hasMax = ageMax !== undefined;
+
+  if (hasMin && hasMax) {
+    if (ageMin === ageMax) {
+      text = `${ageMin}`;
+    } else {
+      text = `${ageMin}–${ageMax}`;
+    }
+  } else if (hasMax) {
+    if (ageMax === 2) {
+      text = "2";
+    } else {
+      text = `2–${ageMax}`;
+    }
+  } else if (hasMin) {
+    text = `${ageMin}+`;
+  }
+  return text;
+}
+
+export function programAgeText(program: Program) {
+  let { allAges, ageMin, ageMax, gradeMin, gradeMax } = program;
+
+  let text = "";
+  let color = "info";
+
+  if (allAges) {
+    text = "All";
+    color = "success";
+  } else if (ageMin !== undefined || ageMax !== undefined) {
+    text = ageRangeStr(ageMin, ageMax);
+    color = "primary";
+  } else if (gradeMin !== undefined || gradeMax !== undefined) {
+    text = gradeRangeStr(gradeMin, gradeMax);
+    color = "info";
+  }
+
+  return { text: text, color: color };
 }
