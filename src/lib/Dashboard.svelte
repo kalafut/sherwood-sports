@@ -1,5 +1,5 @@
 <script>
-  import { Row, Col, Container } from "sveltestrap";
+  import { Row, Col } from "sveltestrap";
   import WelcomeText from "./WelcomeText.svelte";
   import { filteredOrgs } from "../stores";
   import CardView from "./CardView.svelte";

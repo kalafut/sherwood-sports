@@ -1,8 +1,5 @@
 <script>
-  import svelteLogo from "./assets/svelte.svg";
-  import Counter from "./lib/Counter.svelte";
-  import { Button, Col, Container, Row } from "sveltestrap";
-  import LocalOnlyFilter from "./lib/LocalOnlyFilter.svelte";
+  import { Container } from "sveltestrap";
   import Dashboard from "./lib/Dashboard.svelte";
   import NavBar from "./lib/NavBar.svelte";
   import About from "./lib/About.svelte";
