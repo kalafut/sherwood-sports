@@ -20,7 +20,11 @@ const monthStrConv: numStrConv = {
   12: "Dec",
 };
 
-const seasons = {
+type SeasonRange = {
+  [key: string]: number[];
+};
+
+const seasons: SeasonRange = {
   winter: [12, 2],
   spring: [3, 5],
   summer: [6, 8],
