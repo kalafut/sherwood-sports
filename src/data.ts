@@ -1,4 +1,3 @@
-import _ from "lodash";
 import * as consts from "./consts";
 import { Org, OrgList } from "./types";
 
@@ -212,13 +211,14 @@ export const orgs: OrgList = [
         season: [consts.JUN, consts.AUG],
       },
       {
-        name: "FALL",
+        name: "Fall",
         season: [consts.SEP, consts.NOV],
       },
     ],
   },
 ];
 
-export const sports: string[] = _.uniq(
-  orgs.map((v: Org): string => v.sport)
-).sort();
+const _orgs = new Set<string>();
+orgs.forEach((v) => _orgs.add(v.sport));
+
+export const sports = Array.from(_orgs);

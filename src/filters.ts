@@ -1,7 +1,6 @@
 import { Org, Program } from "./types";
 import * as consts from "./consts";
-import { monthInSeason } from "./util";
-import _ from "lodash";
+import { allYear, monthInSeason } from "./util";
 
 type ProgramFilter = (p: Program) => boolean;
 type OrgFilter = (o: Org) => boolean;
@@ -72,8 +71,19 @@ export function sportsFilter(org: Org): boolean {
 }
 
 export function seasonFunctionalFilter(program: Program, seasons) {
-  return _.some(
-    seasons,
-    (val, key) => val && program.season && monthInSeason(program.season[0], key)
-  );
+  if (!program.season || allYear(program.season)) {
+    return true;
+  }
+
+  for (const season in seasons) {
+    if (seasons[season] && monthInSeason(program.season![0], season)) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+for (let m in consts.INITIAL_SEASON_FILTER) {
+  console.log(m);
 }

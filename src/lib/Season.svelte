@@ -1,14 +1,15 @@
 <script>
-  import { monthStr } from "../util";
-  import { ALL_YEAR } from "../consts";
+  import { monthStr, allYear } from "../util";
 
   export let program;
   const { season } = program;
-  let noSeason = !season || season === ALL_YEAR;
+  console.log(program.name, season, allYear(season));
 </script>
 
 <div>
-  {#if !noSeason}
+  {#if allYear(season)}
+    Year round
+  {:else if season}
     {`${monthStr(season[0])}–${monthStr(season[1])}`}
   {/if}
 </div>

@@ -107,6 +107,10 @@ export function isUpcoming(
   return start - month <= 2;
 }
 
+export function allYear(season: number[]) {
+  return season && season[0] == consts.JAN && season[1] == consts.DEC;
+}
+
 // TODO: refactor
 export function ageStr(program: Program) {
   const { allAges, ageMin, ageMax, gradeMin, gradeMax } = program;
