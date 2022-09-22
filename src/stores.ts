@@ -3,11 +3,12 @@ import {
   filteredOrgsFn,
   ageFunctionalFilter,
   seasonFunctionalFilter,
+  emptyProgramsFilter,
 } from "./filters";
 import { orgs as allOrgs, sports } from "./data";
 import { localOnlyFilter as lof } from "./filters";
-import { ProgramFilter, OrgFilter } from "./types";
-import { Org, Program } from "./types";
+import type { ProgramFilter, OrgFilter } from "./types";
+import type { Org, Program } from "./types";
 import { ImmutableStringSet as Set } from "./util";
 import { INITIAL_SEASON_FILTER } from "./consts";
 
@@ -29,6 +30,7 @@ export const filteredOrgs = derived(
       (org: Org): boolean => {
         return $sportsFilter.has(org.sport);
       },
+      emptyProgramsFilter,
     ];
 
     let programFilters: ProgramFilter[] = [

@@ -38,11 +38,11 @@ export function ageFunctionalFilter(program: Program, ageRange): boolean {
   const { min, max } = ageRange;
   const effectiveAgeMin =
     program.ageMin ||
-    (program.gradeMin && gradeToAge(program.gradeMin, false)) ||
+    (program.gradeMin !== undefined && gradeToAge(program.gradeMin, false)) ||
     consts.MIN_FILTER_AGE;
   const effectiveAgeMax =
     program.ageMax ||
-    (program.gradeMax && gradeToAge(program.gradeMax, true)) ||
+    (program.gradeMax !== undefined && gradeToAge(program.gradeMax, true)) ||
     consts.MAX_FILTER_AGE;
 
   return effectiveAgeMax >= min && effectiveAgeMin <= max;
@@ -59,9 +59,8 @@ export function emptyProgramsFilter(org: Org): boolean {
 // TODO unexport this
 export function gradeToAge(grade: number, max: boolean) {
   const offset = max ? 6 : 5;
-  if (grade) {
-    return grade + offset;
-  }
+
+  return grade + offset;
 }
 
 export function sportsFilter(org: Org): boolean {
