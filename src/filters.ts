@@ -83,7 +83,3 @@ export function seasonFunctionalFilter(program: Program, seasons) {
 
   return false;
 }
-
-for (let m in consts.INITIAL_SEASON_FILTER) {
-  console.log(m);
-}

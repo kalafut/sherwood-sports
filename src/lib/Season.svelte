@@ -3,7 +3,6 @@
 
   export let program;
   const { season } = program;
-  console.log(program.name, season, allYear(season));
 </script>
 
 <div>
