@@ -1,10 +1,3 @@
-export const LACROSSE = "Lacrosse",
-  BASKETBALL = "Basketball",
-  SOCCER = "Soccer",
-  SAMPLE = "Sample",
-  MARTIAL_ARTS = "Martial Arts",
-  CHEER = "Cheer";
-
 export const JAN = 1,
   FEB = 2,
   MAR = 3,

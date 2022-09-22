@@ -1,14 +1,37 @@
 import * as consts from "./consts";
 import { Org, OrgList } from "./types";
 
+const LACROSSE = "Lacrosse",
+  BASKETBALL = "Basketball",
+  SOCCER = "Soccer",
+  SAMPLE = "Sample",
+  MARTIAL_ARTS = "Martial Arts",
+  CHEER = "Cheer",
+  BASEBALL = "Baseball";
+
 export const orgs: OrgList = [
+  /**
+   * Baseball
+   */
+  {
+    name: "Sherwood Junior Baseball",
+    url: "https://www.sherwoodjuniorbaseball.com",
+    sport: BASEBALL,
+    programs: [
+      {
+        name: "T-Ball",
+        gradeMax: 0,
+      },
+    ],
+  },
+
   /**
    * Basketball
    */
   {
     name: "Sherwood Youth Basketball",
     summary: "Hoops!",
-    sport: consts.BASKETBALL,
+    sport: BASKETBALL,
     programs: [
       {
         name: "Rec Basketball",
@@ -28,7 +51,7 @@ export const orgs: OrgList = [
   {
     name: "Sherwood Youth Cheer",
     url: "http://www.sherwoodcheer.org",
-    sport: consts.CHEER,
+    sport: CHEER,
     programs: [
       {
         name: "Youth Cheer",
@@ -46,7 +69,7 @@ export const orgs: OrgList = [
     name: "Sherwood Youth Lacrosse",
     summary: "We play Lacrosse",
     url: "https://www.leagueathletics.com/Schedule.asp?org=sherwoodyouthlacrosse.com",
-    sport: consts.LACROSSE,
+    sport: LACROSSE,
     programs: [
       {
         name: "Fiddlesticks",
@@ -68,7 +91,7 @@ export const orgs: OrgList = [
   {
     name: "Fake Lacrosse",
     summary: "We play Lacrosse too",
-    sport: consts.LACROSSE,
+    sport: LACROSSE,
     programs: [
       {
         name: "Fake Youth Lacrosse",
@@ -86,7 +109,7 @@ export const orgs: OrgList = [
     name: "Musa Martial Arts",
     summary: "We play Lacrosse",
     url: "https://musasherwood.com/",
-    sport: consts.MARTIAL_ARTS,
+    sport: MARTIAL_ARTS,
     programs: [
       {
         name: "Little Warriors",
@@ -116,7 +139,7 @@ export const orgs: OrgList = [
   {
     name: "Sherwood Youth Soccer",
     url: "https://www.sherwoodsoccer.org/",
-    sport: consts.SOCCER,
+    sport: SOCCER,
     programs: [
       {
         name: "Fall Soccer",
@@ -130,7 +153,7 @@ export const orgs: OrgList = [
   {
     name: "Westside Timbers",
     url: "http://www.westsidetimbers.org/",
-    sport: consts.SOCCER,
+    sport: SOCCER,
     programs: [
       {
         name: "Timber Tots",
@@ -158,7 +181,7 @@ export const orgs: OrgList = [
     ],
   },
   {
-    sport: consts.SOCCER,
+    sport: SOCCER,
     name: "Tualatin Indoor Soccer",
     summary: "Nearby soccer",
     url: "https://www.tualatinindoor.com",
@@ -183,7 +206,7 @@ export const orgs: OrgList = [
    */
   {
     name: "Sample Org",
-    sport: consts.SAMPLE,
+    sport: SAMPLE,
     programs: [
       {
         name: "Sample 1",
