@@ -223,3 +223,7 @@ export function programAgeText(program: Program) {
 
   return { text: text, color: color };
 }
+
+export function toTitlecase(s: string): string {
+  return s.charAt(0).toUpperCase() + s.substring(1).toLowerCase();
+}

@@ -79,28 +79,3 @@
     {/each}
   </ul>
 </div>
-
-<!-- function SportFilterRow(props: SportFilterRowProps) {
-    const { sport } = props;
-    const sportsFilter = useStore((state) => state.sportsFilter);
-    const toggleSport = useStore((state) => state.toggleSport);
-  
-    return (
-    );
-  }
-  
-  interface SportFilterProps {
-    sports: string[];
-  }
-  
-  export function SportFilter(props: SportFilterProps) {
-    const { sports } = props;
-  
-    return (
-      <div>
-        {sports.map((sport) => (
-          <SportFilterRow key={sport} sport={sport} />
-        ))}
-      </div>
-    );
-  } -->

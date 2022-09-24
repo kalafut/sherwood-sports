@@ -1,4 +1,4 @@
-import { monthInRange, isUpcoming, programAgeText } from "./util";
+import { monthInRange, isUpcoming, programAgeText, toTitlecase } from "./util";
 import * as c from "./consts";
 import { Program } from "./types";
 
@@ -94,4 +94,16 @@ test("converts a program age or grade range into a string", () => {
   expect(pt(p)).toMatchObject({ text: "All", color: S });
 
   // ALL ages
+});
+
+test("Titlecases a string", () => {
+  const t = toTitlecase;
+
+  expect(t("foo")).toBe("Foo");
+  expect(t("Foo")).toBe("Foo");
+  expect(t("FOO")).toBe("Foo");
+  expect(t("fOO")).toBe("Foo");
+
+  expect(t("5 foo")).toBe("5 foo");
+  expect(t("")).toBe("");
 });
