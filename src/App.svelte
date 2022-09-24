@@ -1,5 +1,4 @@
 <script>
-  import { Container } from "sveltestrap";
   import Dashboard from "./lib/Dashboard.svelte";
   import NavBar from "./lib/NavBar.svelte";
   import About from "./lib/About.svelte";
@@ -15,14 +14,14 @@
 </svelte:head>
 
 <main>
-  <Container>
+  <div class="container">
     <NavBar />
     {#if $page == "about"}
       <About />
     {:else}
       <Dashboard />
     {/if}
-  </Container>
+  </div>
 </main>
 
 <style>

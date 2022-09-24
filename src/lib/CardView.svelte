@@ -6,18 +6,6 @@
     ordinal,
     isUpcoming,
   } from "../util";
-  //import { Org, Program } from "../types";
-  import * as consts from "../consts";
-  import {
-    Card,
-    CardBody,
-    CardText,
-    CardTitle,
-    Col,
-    ListGroup,
-    ListGroupItem,
-  } from "sveltestrap";
-  import { flush } from "svelte/internal";
   import Season from "./Season.svelte";
   import AgeBadge from "./AgeBadge.svelte";
   import hash from "object-hash";
@@ -29,44 +17,48 @@
 
 <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
   {#each orgs as org (hash(org))}
-    <Col>
-      <Card>
-        <CardBody>
-          <CardTitle>
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
             <div class="d-flex justify-content-between">
               <a href={org.url}>{org.name}</a>
               <span class="fw-bold fs-6 text-danger">
                 {org.location ? org.location : ""}
               </span>
             </div>
-          </CardTitle>
-          <CardText>Some intro text about the organization.</CardText>
-          <ListGroup flush>
+          </h5>
+          <p class="card-text">Some intro text about the organization.</p>
+          <ul class="list-group list-group-flush">
             {#each org.programs as program (hash(program))}
-              <ListGroupItem
+              <li
+                class="list-group-item d-flex align-items-start justify-content-between"
+                class:list-group-item-warning={isUpcoming(m, program.season)}
+              >
+                <!-- <ListGroupItem
                 color={isUpcoming(m, program.season) ? "warning" : ""}
                 class="d-flex align-items-start justify-content-between"
-              >
-                <Col class="d-flex align-items-start justify-content-start">
+              > -->
+                <div class="col d-flex align-items-start justify-content-start">
                   {#if program.url}
                     <a href={program.url}>{program.name}</a>
                   {:else}
                     {program.name}
                   {/if}
-                </Col>
-                <Col class="d-flex align-items-start justify-content-end">
-                  <Col class="d-flex justify-content-end">
+                </div>
+                <div class="col d-flex align-items-start justify-content-end">
+                  <div class="col d-flex justify-content-end">
                     <Season {program} />
-                  </Col>
-                  <Col class="d-flex justify-content-end">
+                  </div>
+                  <div class="col d-flex justify-content-end">
                     <AgeBadge {program} />
-                  </Col>
-                </Col>
-              </ListGroupItem>
+                  </div>
+                </div>
+              </li>
             {/each}
-          </ListGroup>
-        </CardBody>
-      </Card>
-    </Col>
+          </ul>
+        </div>
+      </div>
+    </div>
   {/each}
 </div>

@@ -1,7 +1,3 @@
-<script>
-  import { Badge } from "sveltestrap";
-</script>
-
 <div>
   <p>
     Sherwood Sports is your local, crowd-sourced guide to sports organizations
@@ -19,8 +15,9 @@
       their sites for more information.
     </li>
     <li>
-      age (e.g. <Badge pill>7-10</Badge>) or grade (e.g.
-      <Badge pill>K-2nd</Badge>
+      age (e.g. <span class="badge rounded-pill text-bg-primary">7-10</span>) or
+      grade (e.g.
+      <span class="badge rounded-pill text-bg-info">K-2nd</span>
       ) limits for the program
     </li>
     <li>Links to organizations and individual programs</li>

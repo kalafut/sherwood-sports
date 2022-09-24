@@ -1,5 +1,4 @@
 <script>
-  import { Badge } from "sveltestrap";
   import { programAgeText } from "../util";
 
   export let program;
@@ -8,7 +7,7 @@
 </script>
 
 {#if text}
-  <Badge pill {color}>
+  <span class={`badge rounded-pill text-bg-${color}`}>
     {text}
-  </Badge>
+  </span>
 {/if}
