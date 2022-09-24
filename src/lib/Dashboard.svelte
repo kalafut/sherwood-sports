@@ -14,7 +14,7 @@
     <FilterBar />
     <!-- </div> -->
     <!-- <WelcomeText /> -->
-    <FilterContainer />
+    <!-- <FilterContainer /> -->
     <CardView orgs={$filteredOrgs} />
 
     <form>

@@ -3,26 +3,18 @@
   import { ageRange } from "../stores";
   import * as consts from "../consts";
 
-  let selectedMin = $ageRange.min,
-    selectedMax = $ageRange.max;
-
   const handleAdjust = (e) => {
-    if (selectedMin !== $ageRange.min && selectedMin > selectedMax) {
-      selectedMax = selectedMin;
-    } else if (selectedMax !== $ageRange.max && selectedMin > selectedMax) {
-      selectedMin = selectedMax;
-    }
-
-    ageRange.update(() => {
-      return { min: selectedMin, max: selectedMax };
+    ageRange.update((a) => {
+      if (a.min > a.max) {
+        const val = parseInt(e.target.value);
+        return { min: val, max: val };
+      }
+      return { min: a.min, max: a.max };
     });
   };
 
   const handleReset = () => {
-    console.log("er");
-    ageRange.update(() => {
-      return { min: consts.MIN_FILTER_AGE, max: consts.MAX_FILTER_AGE };
-    });
+    ageRange.set({ min: consts.MIN_FILTER_AGE, max: consts.MAX_FILTER_AGE });
   };
 
   const ages = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
@@ -44,7 +36,7 @@
       <label for="t3" class="form-label">Min</label>
       <select
         id="t3"
-        bind:value={selectedMin}
+        bind:value={$ageRange.min}
         on:change={handleAdjust}
         class="form-select"
         aria-label="Default select example"
@@ -59,7 +51,7 @@
     <div class="mb-3">
       <label for="t4" class="form-label">Max</label>
       <select
-        bind:value={selectedMax}
+        bind:value={$ageRange.max}
         on:change={handleAdjust}
         id="t4"
         class="form-select"
@@ -72,7 +64,7 @@
         {/each}
       </select>
     </div>
-    <button type="sumit" class="btn btn-primary" on:click={handleReset}>
+    <button type="button" class="btn btn-primary" on:click={handleReset}>
       Reset
     </button>
   </form>
