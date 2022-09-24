@@ -1,6 +1,7 @@
 <script>
   import SportsFilter2 from "./SportsFilter2.svelte";
   import AgeFilter2 from "./AgeFilter2.svelte";
+  import LocalOnlyFilter from "./LocalOnlyFilter.svelte";
 </script>
 
 <!-- <div class="row"> -->
@@ -10,5 +11,8 @@
   </div>
   <div class="p-4">
     <AgeFilter2 />
+  </div>
+  <div class="p-4">
+    <LocalOnlyFilter />
   </div>
 </div>
