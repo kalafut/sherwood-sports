@@ -12,7 +12,6 @@
 
 <div class="row">
   <div class="col">
-    Icon: <i class="bi-alarm" />
     <SideFilter />
     <!-- <FilterBar /> -->
     <!-- <WelcomeText /> -->

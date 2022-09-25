@@ -4,15 +4,16 @@
   import LocalOnlyFilter from "./LocalOnlyFilter.svelte";
   import SeasonFilter from "./SeasonFilter.svelte";
   import { resetFilters } from "../stores";
+  import Sliders2 from "svelte-bootstrap-icons/lib/Sliders2.svelte";
 </script>
 
 <button
-  class="btn btn-primary"
+  class="btn btn-outline-success p-2 m-2"
   type="button"
   data-bs-toggle="offcanvas"
   data-bs-target="#offcanvasExample"
   aria-controls="offcanvasExample">
-  Filters
+  <Sliders2 /> Filters
 </button>
 
 <div
