@@ -6,7 +6,7 @@
   };
 </script>
 
-<div class="dropdown">
+<!-- <div class="dropdown">
   <button
     class="btn btn-outline-primary dropdown-toggle"
     type="button"
@@ -38,9 +38,14 @@
       >
     </li>
   </ul>
+</div> -->
+<div class="form-check form-switch">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    id="flexSwitchCheckChecked"
+    bind:checked={$localOnlyFilter} />
+  <label class="form-check-label" for="flexSwitchCheckChecked">
+    Sherwood only
+  </label>
 </div>
-<!-- Local only: <input
-  type="checkbox"
-  checked={$localOnlyFilter}
-  on:change={toggleLocalOnly}
-/> -->

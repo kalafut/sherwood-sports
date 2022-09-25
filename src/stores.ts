@@ -12,12 +12,22 @@ import type { Org, Program } from "./types";
 import { ImmutableStringSet as Set } from "./util";
 import { INITIAL_SEASON_FILTER } from "./consts";
 
-// Stores
-export const localOnlyFilter = writable(false);
+const DEFAULT_AGE_RANGE = { min: 2, max: 18 };
+// Current page
 export const page = writable("dashboard");
+
+// Filters
+export const localOnlyFilter = writable(false);
 export const sportsFilter = writable(new Set(sports));
-export const ageRange = writable({ min: 2, max: 18 });
+export const ageRange = writable(DEFAULT_AGE_RANGE);
 export const seasonFilter = writable({ ...INITIAL_SEASON_FILTER });
+
+export const resetFilters = () => {
+  localOnlyFilter.set(false);
+  sportsFilter.set(new Set(sports));
+  ageRange.set(DEFAULT_AGE_RANGE);
+  seasonFilter.set({ ...INITIAL_SEASON_FILTER });
+};
 
 export const filteredOrgs = derived(
   [ageRange, localOnlyFilter, sportsFilter, seasonFilter],

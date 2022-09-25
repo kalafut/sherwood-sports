@@ -6,17 +6,17 @@
 </script>
 
 <!-- <div class="row"> -->
-<div class="d-flex flex-row mb-3">
-  <div class="p-4">
+<div class="d-flex flex-row">
+  <div class="">
     <SportsFilter2 />
   </div>
-  <div class="p-4">
+  <div class="">
     <AgeFilter2 />
   </div>
-  <div class="p-4">
+  <div class="">
     <SeasonFilter />
   </div>
-  <div class="p-4">
+  <!-- <div class="">
     <LocalOnlyFilter />
-  </div>
+  </div> -->
 </div>

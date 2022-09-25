@@ -7,12 +7,14 @@
   import SportsFilter2 from "./SportsFilter2.svelte";
   import AgeFilter2 from "./AgeFilter2.svelte";
   import FilterBar from "./FilterBar.svelte";
+  import SideFilter from "./SideFilter.svelte";
 </script>
 
 <div class="row">
   <div class="col">
-    <FilterBar />
-    <!-- </div> -->
+    Icon: <i class="bi-alarm" />
+    <SideFilter />
+    <!-- <FilterBar /> -->
     <!-- <WelcomeText /> -->
     <!-- <FilterContainer /> -->
     <CardView orgs={$filteredOrgs} />

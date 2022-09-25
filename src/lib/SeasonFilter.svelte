@@ -7,6 +7,21 @@
 </script>
 
 <div>
+  {#each ["spring", "summer", "fall", "winter"] as season}
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id={`season-filter-${season}`}
+        bind:checked={$seasonFilter[season]}
+      />
+      <label class="form-check-label" for={`season-filter-${season}`}>
+        {toTitlecase(season)}
+      </label>
+    </div>
+  {/each}
+</div>
+<!-- <div>
   <div class="dropdown">
     <button
       class="btn btn-outline-primary dropdown-toggle"
@@ -36,4 +51,4 @@
       {/each}
     </ul>
   </div>
-</div>
+</div> -->
