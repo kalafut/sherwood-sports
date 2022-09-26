@@ -18,7 +18,7 @@
 
 <div
   class="offcanvas offcanvas-start"
-  data-bs-scroll="true"
+  data-bs-scroll="false"
   tabindex="-1"
   id="offcanvasExample"
   aria-labelledby="offcanvasExampleLabel">

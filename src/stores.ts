@@ -13,8 +13,6 @@ import { ImmutableStringSet as Set } from "./util";
 import { INITIAL_SEASON_FILTER } from "./consts";
 
 const DEFAULT_AGE_RANGE = { min: 2, max: 18 };
-// Current page
-export const page = writable("dashboard");
 
 // Filters
 export const localOnlyFilter = writable(false);

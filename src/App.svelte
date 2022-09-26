@@ -2,21 +2,19 @@
   import Dashboard from "./lib/Dashboard.svelte";
   import NavBar from "./lib/NavBar.svelte";
   import About from "./lib/About.svelte";
-
-  import { page } from "./stores";
+  import hash from "./hash";
 </script>
 
 <svelte:head>
   <link
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-  />
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
 </svelte:head>
 
 <main>
   <div class="container">
     <NavBar />
-    {#if $page == "about"}
+    {#if $hash == "#about"}
       <About />
     {:else}
       <Dashboard />
