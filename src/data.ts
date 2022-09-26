@@ -210,7 +210,7 @@ export const orgs: OrgList = [
   {
     name: "Sample Org",
     sport: SAMPLE,
-    reviewed: "2022-09-26",
+    reviewed: "2022-09-27",
     programs: [
       {
         name: "Sample 1",
