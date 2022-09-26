@@ -8,7 +8,7 @@
 </script>
 
 <button
-  class="btn btn-outline-success p-2 m-2"
+  class="btn btn-primary btn-sm p-2 m-2"
   type="button"
   data-bs-toggle="offcanvas"
   data-bs-target="#offcanvasExample"
@@ -23,7 +23,7 @@
   id="offcanvasExample"
   aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filters</h5>
+    <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filters</h5> -->
     <button
       type="button"
       class="btn-close"

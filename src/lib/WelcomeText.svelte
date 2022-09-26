@@ -1,14 +1,21 @@
 <div>
   <p>
-    Sherwood Sports is your local, crowd-sourced guide to sports organizations
-    in the Sherwood area. Check out the{" "}
-    [[About link]] for information about the site and how you can help,
+    <span class="fw-bold fs-6">Sherwood Sports</span> is your crowd-sourced guide
+    to sports offerings in the Sherwood area.
   </p>
   <p>
-    The directory below lists sports organizations and the programs they offer.
+    Key information from local organizations if pulled together into one
+    convenient dashboard. Filter by sport, age range and more to quickly find
+    what you're looking for.
   </p>
-  <p>Additional information includes:</p>
-  <ul>
+  <p>
+    For more information about the site and and how you can help, please visit
+    the <a href="#about">About</a> and <a href="">Contribute</a>
+    pages.
+  </p>
+  <p>Enjoy!</p>
+
+  <!-- <ul>
     <li>
       When the season typically runs. Highlighed programs will start within 2
       months and <span class="fw-bold">may</span> be open for registration, so check
@@ -26,5 +33,5 @@
   <p>
     I hope you find this useful, and don't hesitate to **reach out** with
     questions or feedback!
-  </p>
+  </p> -->
 </div>

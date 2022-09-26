@@ -3,6 +3,7 @@
   import NavBar from "./lib/NavBar.svelte";
   import About from "./lib/About.svelte";
   import hash from "./hash";
+  import Contribute from "./lib/Contribute.svelte";
 </script>
 
 <svelte:head>
@@ -16,7 +17,10 @@
     <NavBar />
     {#if $hash == "#about"}
       <About />
+    {:else if $hash == "#contribute"}
+      <Contribute />
     {:else}
+      <!-- <WelcomeText /> -->
       <Dashboard />
     {/if}
   </div>

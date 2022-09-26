@@ -31,6 +31,8 @@ export interface Org {
   url?: string;
   location?: string;
   status?: string;
+  reviewed?: string;
+  reviewNotes?: string;
 }
 
 export interface AgeFilter {
