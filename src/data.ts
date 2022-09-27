@@ -9,7 +9,7 @@ const LACROSSE = "Lacrosse",
   CHEER = "Cheer",
   BASEBALL = "Baseball";
 
-export const orgs: OrgList = [
+const baseOrgs: OrgList = [
   /**
    * Baseball
    */
@@ -245,7 +245,14 @@ export const orgs: OrgList = [
   },
 ];
 
+// Build list of sports
 const _orgs = new Set<string>();
-orgs.forEach((v) => _orgs.add(v.sport));
-
+baseOrgs.forEach((v) => _orgs.add(v.sport));
 export const sports = Array.from(_orgs);
+sports.sort();
+
+// Sort orgs
+export const orgs = [...baseOrgs];
+orgs.sort((a, b) => {
+  return a.name.localeCompare(b.name);
+});

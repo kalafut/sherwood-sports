@@ -5,9 +5,13 @@
 
   const orgsCopy = [...orgs];
   orgsCopy.sort((a, b) => {
-    return a.reviewed < b.reviewed ? -1 : 1;
+    if (!a.reviewed) {
+      return -1;
+    } else if (!b.reviewed) {
+      return 1;
+    }
+    return a.reviewed.localeCompare(b.reviewed);
   });
-  const s = () => alert(4);
 </script>
 
 <table class="table">
