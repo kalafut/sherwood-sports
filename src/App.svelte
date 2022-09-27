@@ -5,6 +5,7 @@
   import hash from "./hash";
   import Contribute from "./lib/Contribute.svelte";
   import Errors from "./lib/Errors.svelte";
+  import Analytics from "./lib/Analytics.svelte";
 </script>
 
 <main>
@@ -21,6 +22,7 @@
     {/if}
   </div>
 </main>
+<Analytics />
 
 <style>
   /* .logo {
