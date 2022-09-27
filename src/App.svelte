@@ -6,12 +6,6 @@
   import Contribute from "./lib/Contribute.svelte";
 </script>
 
-<svelte:head>
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
-</svelte:head>
-
 <main>
   <div class="container">
     <NavBar />
