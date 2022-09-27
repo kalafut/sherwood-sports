@@ -7,10 +7,12 @@
   const { text, color } = programAgeText(program);
 </script>
 
-{#if text}
-  <span class={`badge rounded-pill text-bg-${color}`}>
-    {text}
-  </span>
-{:else}
-  <QuestionCircle />
-{/if}
+<div>
+  {#if text}
+    <span class={`badge rounded-pill text-bg-${color}`}>
+      {text}
+    </span>
+  {:else}
+    <QuestionCircle />
+  {/if}
+</div>
