@@ -1,5 +1,6 @@
 <script>
   import { programAgeText } from "../util";
+  import QuestionCircle from "svelte-bootstrap-icons/lib/QuestionCircle.svelte";
 
   export let program;
 
@@ -10,4 +11,6 @@
   <span class={`badge rounded-pill text-bg-${color}`}>
     {text}
   </span>
+{:else}
+  <QuestionCircle />
 {/if}

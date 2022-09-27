@@ -1,3 +1,7 @@
+<script>
+  import QuestionCircle from "svelte-bootstrap-icons/lib/QuestionCircle.svelte";
+</script>
+
 <div>
   <h4>Welcome!</h4>
   <p>
@@ -20,7 +24,35 @@
     <a href="https://en.wikipedia.org/wiki/Crowdsourcing"> crowdsourcing </a>
     we can build a comprehensive, up-to-date resource for the community.
   </p>
-  <h4>What's included</h4>
+  <h4 class="mt-4">Using the Dashboard</h4>
+  Each card in the dashboard provides some or all of:
+  <ul>
+    <li>
+      Links to the organization's homepage, and possibly links to individual
+      programs if available.
+    </li>
+    <li>
+      Dates when the season runs, or "Year round". If a row <span
+        class="bg-success bg-opacity-25">
+        &nbsp;is highlighted green
+      </span>, it means that the season starts within 2 months so you may want
+      to look into registering.
+    </li>
+    <li>
+      Age ranges, either in years <span
+        class={`badge rounded-pill text-bg-primary`}>6-10</span>
+      or grades <span class={`badge rounded-pill text-bg-info`}>3rd–12th</span>.
+    </li>
+    <li>
+      If the organization is <strong>not</strong> based in Sherwood, the location
+      will be shown.
+    </li>
+  </ul>
+
+  A <QuestionCircle /> means I don't have that information. If you can help fill
+  in those gaps, <a href="#contribute">please let me know</a>.
+
+  <h4 class="mt-4">What sports/clubs are included?</h4>
   <p>
     The site track sports programs based primarily Sherwood, but also includes
     some nearby groups if they fill a gap. For example, Tualatin's MVP Sports
@@ -32,19 +64,13 @@
   </p>
   <ul>
     <li>Non-sport clubs and activities</li>
+    <li>School and YMCA programs (consult their catalogs)</li>
     <li>Individual trainers</li>
   </ul>
-  <h4>How you can help</h4>
+  <h4 class="mt-4">How you can help</h4>
   <p>
-    This site will work best with support from the community. Some things you
-    can do:
-  </p>
-  <ul>
-    <li>Suggest new groups</li>
-    <li>Report errors, broken links, and help fill in missing information</li>
-    <li>Feedback on how to make the site more useful</li>
-  </ul>
-  <p>
-    Please visit the <a href="#contributions">Contributions</a> page for more details.
+    This site will work best with support from the community. Please visit the <a
+      href="#contribute">Contribute</a> page for more details on how the site is
+    maintained and ways you can help.
   </p>
 </div>

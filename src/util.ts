@@ -212,7 +212,8 @@ export function programAgeText(program: Program) {
 
   if (allAges) {
     text = "All";
-    color = "success";
+    // color = "success";
+    color = "primary";
   } else if (ageMin !== undefined || ageMax !== undefined) {
     text = ageRangeStr(ageMin, ageMax);
     color = "primary";
