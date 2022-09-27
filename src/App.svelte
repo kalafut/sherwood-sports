@@ -4,10 +4,12 @@
   import About from "./lib/About.svelte";
   import hash from "./hash";
   import Contribute from "./lib/Contribute.svelte";
+  import Errors from "./lib/Errors.svelte";
 </script>
 
 <main>
   <div class="container">
+    <Errors />
     <NavBar />
     {#if $hash == "#about"}
       <About />
