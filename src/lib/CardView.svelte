@@ -1,14 +1,9 @@
 <script>
-  import {
-    currentMonth,
-    monthStr,
-    monthInRange,
-    ordinal,
-    isUpcoming,
-  } from "../util";
+  import { currentMonth, isUpcoming } from "../util";
   import Season from "./Season.svelte";
   import AgeBadge from "./AgeBadge.svelte";
   import hash from "object-hash";
+  import QuestionCircle from "svelte-bootstrap-icons/lib/QuestionCircle.svelte";
 
   export let orgs;
 
@@ -22,26 +17,28 @@
         <div class="card-body">
           <h5 class="card-title">
             <div class="d-flex justify-content-between">
-              <a href={org.url}>{org.name}</a>
+              {#if org.url}
+                <a class="text-decoration-none" href={org.url}>{org.name}</a>
+              {:else}
+                {org.name}
+              {/if}
               <span class="fw-bold fs-6 text-danger">
                 {org.location ? org.location : ""}
               </span>
             </div>
           </h5>
-          <p class="card-text">Some intro text about the organization.</p>
+          {#if org.summary}
+            <p class="card-text">{org.summary}</p>
+          {/if}
           <ul class="list-group list-group-flush">
             {#each org.programs as program (hash(program))}
               <li
                 class="list-group-item d-flex align-items-start justify-content-between"
-                class:list-group-item-warning={isUpcoming(m, program.season)}
-              >
-                <!-- <ListGroupItem
-                color={isUpcoming(m, program.season) ? "warning" : ""}
-                class="d-flex align-items-start justify-content-between"
-              > -->
+                class:list-group-item-success={isUpcoming(m, program.season)}>
                 <div class="col d-flex align-items-start justify-content-start">
                   {#if program.url}
-                    <a href={program.url}>{program.name}</a>
+                    <a class="text-decoration-none" href={program.url}
+                      >{program.name}</a>
                   {:else}
                     {program.name}
                   {/if}
