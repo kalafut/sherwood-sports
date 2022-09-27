@@ -1,6 +1,9 @@
 <script>
   import OrgDirectory from "./OrgDirectory.svelte";
+  import BackLink from "./BackLink.svelte";
 </script>
+
+<BackLink />
 
 <p>
   This site is a volunteer effort by me (Jim). All of the data for this site is

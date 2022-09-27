@@ -1,8 +1,10 @@
 <script>
   import QuestionCircle from "svelte-bootstrap-icons/lib/QuestionCircle.svelte";
+  import BackLink from "./BackLink.svelte";
 </script>
 
 <div>
+  <BackLink />
   <h4>Welcome!</h4>
   <p>
     When we moved to <a href="https://www.sherwoodoregon.gov/">Sherwood</a>, we
@@ -66,7 +68,8 @@
   </ul>
   <h4 class="mt-4">How you can help</h4>
   <p>
-    This site will work best with support from the community. Please visit the
+    This site is a volunteer effort and benefits from people reporting issue.
+    Please visit the
     <a href="#contribute">Contribute</a> page for more details on how the site is
     maintained and ways you can help.
   </p>
