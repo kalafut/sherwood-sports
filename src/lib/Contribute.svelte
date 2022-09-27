@@ -5,9 +5,10 @@
 
 <BackLink />
 
+<h4 class="my-2">Who runs this?</h4>
 <p>
-  This site is a volunteer effort by me (Jim). All of the data for this site is
-  curated by hand from the each organization's website (or Facebook page, or
+  This site is a volunteer effort by me (Jim). All of the data for the site is
+  curated by hand from the each organization websites (or Facebook pages, or
   whatever they have). You may have noticed that some of these sites aren't kept
   up, can be a challenge to navigate, or link out to third party registration
   sites. A steady effort is needed to keep data on Sherwood Sports up-to-date,
@@ -47,5 +48,18 @@
   you have for how I can improve it.
 </p>
 
-<h4 class="mt-4">Organization Reviews</h4>
-<OrgDirectory />
+<p>
+  <button
+    class="btn btn-primary mt-4"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#collapseExample"
+    aria-expanded="false"
+    aria-controls="collapseExample">
+    Review History
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <h4 class="mt-4">Organization Reviews</h4>
+  <OrgDirectory />
+</div>
