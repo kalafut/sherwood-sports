@@ -8,11 +8,11 @@
 <h4 class="my-2">Who runs this?</h4>
 <p>
   This site is a volunteer effort by me (Jim). All of the data for the site is
-  curated by hand from the each organization websites (or Facebook pages, or
-  whatever they have). You may have noticed that some of these sites aren't kept
-  up, can be a challenge to navigate, or link out to third party registration
-  sites. A steady effort is needed to keep data on Sherwood Sports up-to-date,
-  and I welcome your help!
+  curated manually from each organization website (or Facebook page, or whatever
+  they have). You may have noticed that some of these sites aren't kept up, can
+  be a challenge to navigate, or link out to third party registration sites. A
+  steady effort is needed to keep data on Sherwood Sports up-to-date, and I
+  welcome your help!
 </p>
 
 <p>You can reach a out a few ways with questions or contributions:</p>
@@ -29,7 +29,7 @@
 <h4 class="my-4">Ways to contribute</h4>
 <p>
   <strong>Discovery.</strong>
-  Have I missed some organzations, or have new ones opened up? Please let me know
+  Have I missed some organizations, or have new ones opened up? Please let me know
   about them!
 </p>
 
@@ -43,7 +43,7 @@
 </p>
 
 <p>
-  <strong>General Feedback </strong>. Are there bugs with the site itself, or
+  <strong>General Feedback</strong>. Are there bugs with the site itself, or
   ways it could work better? It is completely custom so let me know what ideas
   you have for how I can improve it.
 </p>

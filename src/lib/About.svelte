@@ -8,15 +8,15 @@
   <h4>Welcome!</h4>
   <p>
     When we moved to <a href="https://www.sherwoodoregon.gov/">Sherwood</a>, we
-    struggled with finding sports activities for our kids. The city does provide
-    links to some
+    struggled with signing our kids up for sports. The city provides links to
+    some
     <a
       href="https://www.sherwoodoregon.gov/community/page/sherwood-youth-sports">
       Sherwood-based organizations</a
-    >, but knowing the detail about what is available and when you need to sign
-    up is a chore. Information is spread across dozens of websites, and often
-    we'd learn what was coming up via word-of-mouth, or by being in a certain
-    Facebook group. And some programs are only available in nearby communities.
+    >, but learning the details about what was available and when to sign up is
+    a chore. Information is spread across many websites, and often the best
+    information is via word-of-mouth, or by being in a certain Facebook group.
+    And some sports are only available in other nearby towns.
   </p>
   <p>
     The goal of <span class="fw-bold fs-6">Sherwood Sports</span> is to make this
