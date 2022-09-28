@@ -154,8 +154,6 @@ const baseOrgs: OrgList = [
     name: "Westside Timbers",
     url: "http://www.westsidetimbers.org/",
     sport: SOCCER,
-    reviewed: "2022-10-24",
-    reviewNotes: 'Some test note. Here\'s a <a href="https://cnn.com">link</a>',
     programs: [
       {
         name: "Timber Tots",
@@ -187,7 +185,6 @@ const baseOrgs: OrgList = [
     name: "Tualatin Indoor Soccer",
     summary: "Nearby soccer",
     url: "https://www.tualatinindoor.com",
-    reviewed: "2022-10-24",
     programs: [
       {
         name: "Youth Indoor League",
@@ -210,7 +207,6 @@ const baseOrgs: OrgList = [
   {
     name: "Sample Org",
     sport: SAMPLE,
-    reviewed: "2022-09-25",
     programs: [
       {
         name: "Sample 1",

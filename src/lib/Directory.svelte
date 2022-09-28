@@ -1,7 +1,7 @@
 <script>
   import { filteredOrgs } from "../stores";
   import CardView from "./CardView.svelte";
-  import SideFilter from "./SideFilter.svelte";
+  import Filter from "./Filter.svelte";
   import DirectoryHeader from "./DirectoryHeader.svelte";
   import WelcomeBanner from "./WelcomeBanner.svelte";
 </script>
@@ -10,7 +10,7 @@
   <div class="col">
     <WelcomeBanner />
     <DirectoryHeader />
-    <SideFilter />
+    <Filter />
     <!-- <FilterBar /> -->
     <!-- <WelcomeText /> -->
     <!-- <FilterContainer /> -->
