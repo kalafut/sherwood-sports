@@ -21,10 +21,10 @@
   <p>
     The goal of <span class="fw-bold fs-6">Sherwood Sports</span> is to make this
     a bit easier by pulling key information about sports programs into one convenient
-    dashboard. Find what you're looking for quickly, and know when to sign up.
+    directory. Find what you're looking for quickly, and know when to sign up.
   </p>
-  <h4 class="mt-4">Using the Dashboard</h4>
-  Each entry in the dashboard provides some or all of:
+  <h4 class="mt-4">Using the Directory</h4>
+  Each entry in the directory provides some or all of:
   <ul>
     <li>
       Links to the organization's homepage, and possibly links to individual

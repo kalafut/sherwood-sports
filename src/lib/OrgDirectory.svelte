@@ -25,7 +25,7 @@
   <tbody>
     {#each orgsCopy as org}
       <tr>
-        <td><a href={org.url}>{org.name}</a></td>
+        <td><a href={org.url} target="_blank">{org.name}</a></td>
         <td>{org.reviewed || ""}</td>
         <td>
           {#if org.reviewNotes}

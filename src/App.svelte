@@ -1,5 +1,5 @@
 <script>
-  import Dashboard from "./lib/Dashboard.svelte";
+  import Directory from "./lib/Directory.svelte";
   import NavBar from "./lib/NavBar.svelte";
   import About from "./lib/About.svelte";
   import hash from "./hash";
@@ -18,7 +18,7 @@
       <Contribute />
     {:else}
       <!-- <WelcomeText /> -->
-      <Dashboard />
+      <Directory />
     {/if}
   </div>
 </main>

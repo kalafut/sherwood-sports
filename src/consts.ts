@@ -10,7 +10,8 @@ export const JAN = 1,
   OCT = 10,
   NOV = 11,
   DEC = 12,
-  ALL_YEAR = [JAN, DEC];
+  ALL_YEAR = [JAN, DEC],
+  CHECK_SITE = [JAN, DEC];
 
 export const MIN_FILTER_AGE = 2,
   MAX_FILTER_AGE = 18;
