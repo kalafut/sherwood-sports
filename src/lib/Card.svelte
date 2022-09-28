@@ -9,7 +9,7 @@
 </script>
 
 <div class="col">
-  <div class="card">
+  <div class="card border border-3 border-dark border-opacity-25">
     <div class="card-body">
       <h5 class="card-title">
         <div class="d-flex justify-content-between">
