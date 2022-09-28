@@ -4,10 +4,11 @@ import type { OrgList } from "./types";
 const LACROSSE = "Lacrosse",
   BASKETBALL = "Basketball",
   SOCCER = "Soccer",
-  SAMPLE = "Sample",
+  // SAMPLE = "Sample",
   MARTIAL_ARTS = "Martial Arts",
   CHEER = "Cheer",
-  BASEBALL = "Baseball";
+  BASEBALL = "Baseball",
+  GOLF = "Golf";
 
 const baseOrgs: OrgList = [
   /**
@@ -30,17 +31,23 @@ const baseOrgs: OrgList = [
    */
   {
     name: "Sherwood Youth Basketball",
-    summary: "Hoops!",
     sport: BASKETBALL,
+    url: "https://www.sherwoodbasketball.com",
+    reviewed: "2022-09-28",
     programs: [
       {
-        name: "Rec Basketball",
-        season: [consts.NOV, consts.FEB],
+        name: "Recreational",
+        url: "https://www.sherwoodbasketball.com/programs",
+        season: [consts.NOV, consts.MAR],
         gradeMin: 3,
         gradeMax: 12,
       },
       {
-        name: "Competitive Basketball",
+        name: "Classic (competitive)",
+        url: "https://www.sherwoodbasketball.com/programs",
+        season: [consts.NOV, consts.MAR],
+        gradeMin: 4,
+        gradeMax: 8,
       },
     ],
   },
@@ -52,6 +59,9 @@ const baseOrgs: OrgList = [
     name: "Sherwood Youth Cheer",
     url: "http://www.sherwoodcheer.org",
     sport: CHEER,
+    reviewed: "2022-09-28",
+    reviewNotes:
+      'Their site calendar doesn\'t work. Season dates were pulled from <a href="https://static1.squarespace.com/static/5343935be4b00493c5019003/t/62573671ad604f00b720ce48/1649882744382/parent+night+2022.1+copy.pdf">Parents night</>',
     programs: [
       {
         name: "Youth Cheer",
@@ -61,55 +71,70 @@ const baseOrgs: OrgList = [
       },
     ],
   },
+  /**
+   * Golf
+   */
+  {
+    name: "Tualatin Island Greens",
+    url: "https://www.tualatinislandgreens.com/",
+    sport: GOLF,
+    reviewed: "2022-09-28",
+    programs: [
+      {
+        name: "Youth Lessons",
+        url: "https://www.tualatinislandgreens.com/lessons.html",
+        season: consts.ALL_YEAR,
+        ageMax: 17,
+      },
+      {
+        name: "Adult Lessons",
+        url: "https://www.tualatinislandgreens.com/lessons.html",
+        season: consts.ALL_YEAR,
+        ageMin: 18,
+      },
+    ],
+  },
 
   /**
    * Lacrosse
    */
   {
     name: "Sherwood Youth Lacrosse",
-    summary: "We play Lacrosse",
-    url: "https://www.leagueathletics.com/Schedule.asp?org=sherwoodyouthlacrosse.com",
+    url: "http://www.sherwoodyouthlacrosse.com",
     sport: LACROSSE,
+    reviewed: "2022-09-28",
     programs: [
       {
         name: "Fiddlesticks",
-        url: "https://www.leagueathletics.com/Page.asp?n=107395&org=sherwoodyouthlacrosse.com",
+        url: "http://www.sherwoodyouthlacrosse.com/Page.asp?n=107395&org=sherwoodyouthlacrosse.com",
         season: [consts.APR, consts.MAY],
         gradeMin: 0,
         gradeMax: 2,
       },
       {
-        name: "Youth Lacrosse",
-        season: [consts.APR, consts.JUN],
+        name: "Boy's Recreational",
+        url: "http://www.sherwoodyouthlacrosse.com/Page.asp?n=107396&org=sherwoodyouthlacrosse.com",
+        gradeMin: 1,
+        gradeMax: 8,
+        season: [consts.MAR, consts.MAY],
       },
       {
-        name: "Adult Lacrosse",
-        season: [consts.MAY, consts.JUN],
+        name: "Girl's Recreational",
+        url: "http://www.sherwoodyouthlacrosse.com/Page.asp?n=107397&org=sherwoodyouthlacrosse.com",
+        gradeMin: 3,
+        gradeMax: 8,
+        season: [consts.MAR, consts.MAY],
       },
     ],
   },
-  {
-    name: "Fake Lacrosse",
-    summary: "We play Lacrosse too",
-    sport: LACROSSE,
-    programs: [
-      {
-        name: "Fake Youth Lacrosse",
-      },
-      {
-        name: "Fake Adult Lacrosse",
-      },
-    ],
-  },
-
   /**
    * Martial arts
    */
   {
     name: "Musa Martial Arts",
-    summary: "We play Lacrosse",
     url: "https://musasherwood.com/",
     sport: MARTIAL_ARTS,
+    reviewed: "2022-09-28",
     programs: [
       {
         name: "Little Warriors",
@@ -128,7 +153,13 @@ const baseOrgs: OrgList = [
         name: "Adult Taekwondo, Hapkido, Jiu-Jitsu",
         url: "https://musasherwood.com/adult-martial-arts",
         season: consts.ALL_YEAR,
-        gradeMax: 5,
+        ageMin: 18,
+      },
+      {
+        name: "Family Taekwondo",
+        url: "https://musasherwood.com/adult-martial-arts",
+        season: consts.ALL_YEAR,
+        allAges: true,
       },
     ],
   },
@@ -140,43 +171,58 @@ const baseOrgs: OrgList = [
     name: "Sherwood Youth Soccer",
     url: "https://www.sherwoodsoccer.org/",
     sport: SOCCER,
+    reviewed: "2022-09-28",
     programs: [
       {
         name: "Fall Soccer",
-        season: [consts.APR, consts.JUN],
+        url: "https://www.sherwoodsoccer.org/Default.aspx?tabid=854292",
+        season: [consts.AUG, consts.OCT],
+        gradeMin: 0,
+        gradeMax: 12,
       },
       {
-        name: "Westside Timbers",
+        name: "Spring Soccer",
+        url: "https://www.sherwoodsoccer.org/Default.aspx?tabid=854291",
+        season: [consts.APR, consts.MAY],
+        gradeMin: 0,
+        gradeMax: 12,
       },
     ],
   },
   {
     name: "Westside Timbers",
-    url: "http://www.westsidetimbers.org/",
+    url: "https://www.westsidetimbers.org/",
     sport: SOCCER,
+    summary:
+      "WT offers a large number of development and competitive programs throughout the year in Beaverton, Sherwood and Tualatin. See their site for details.",
+    reviewed: "2022-09-28",
     programs: [
       {
         name: "Timber Tots",
-        season: [consts.APR, consts.JUN],
         url: "http://www.westsidetimbers.org/about-us/program-overview/timber-tots-program",
         ageMax: 6,
+        season: consts.CHECK_SITE,
       },
       {
         name: "Development Program",
         url: "http://www.westsidetimbers.org/about-us/program-overview/development-program-wdp",
         ageMin: 7,
         ageMax: 10,
+        season: consts.CHECK_SITE,
       },
       {
-        name: "Development Program 2",
-        url: "http://www.westsidetimbers.org/about-us/program-overview/development-program-wdp",
-        gradeMin: 3,
-        gradeMax: 5,
+        name: "Premier Development",
+        url: "http://www.westsidetimbers.org/about-us/program-overview/premier-development-program-pd",
+        ageMin: 9,
+        ageMax: 10,
+        season: consts.CHECK_SITE,
       },
       {
-        name: "At least 10",
-        url: "http://www.westsidetimbers.org/about-us/program-overview/development-program-wdp",
-        ageMin: 10,
+        name: "Competitive",
+        url: "http://www.westsidetimbers.org/about-us/program-overview/competitive-u11-u19",
+        ageMin: 11,
+        ageMax: 19,
+        season: consts.CHECK_SITE,
       },
     ],
   },
@@ -201,44 +247,44 @@ const baseOrgs: OrgList = [
     ],
     location: "Tualatin",
   },
-  /**
-   * Sample Data
-   */
-  {
-    name: "Sample Org",
-    sport: SAMPLE,
-    programs: [
-      {
-        name: "Sample 1",
-        season: [consts.NOV, consts.MAR],
-        ageMin: 7,
-        ageMax: 10,
-      },
-      {
-        name: "No age limit",
-        season: [consts.JAN, consts.MAR],
-        allAges: true,
-      },
-      {
-        name: "Winter",
-        season: [consts.DEC, consts.FEB],
-      },
-      {
-        name: "Spring",
-        season: [consts.MAR, consts.MAY],
-        ageMin: 8,
-        ageMax: 9,
-      },
-      {
-        name: "Summer",
-        season: [consts.JUN, consts.AUG],
-      },
-      {
-        name: "Fall",
-        season: [consts.SEP, consts.NOV],
-      },
-    ],
-  },
+  // /**
+  //  * Sample Data
+  //  */
+  // {
+  //   name: "Sample Org",
+  //   sport: SAMPLE,
+  //   programs: [
+  //     {
+  //       name: "Sample 1",
+  //       season: [consts.NOV, consts.MAR],
+  //       ageMin: 7,
+  //       ageMax: 10,
+  //     },
+  //     {
+  //       name: "No age limit",
+  //       season: [consts.JAN, consts.MAR],
+  //       allAges: true,
+  //     },
+  //     {
+  //       name: "Winter",
+  //       season: [consts.DEC, consts.FEB],
+  //     },
+  //     {
+  //       name: "Spring",
+  //       season: [consts.MAR, consts.MAY],
+  //       ageMin: 8,
+  //       ageMax: 9,
+  //     },
+  //     {
+  //       name: "Summer",
+  //       season: [consts.JUN, consts.AUG],
+  //     },
+  //     {
+  //       name: "Fall",
+  //       season: [consts.SEP, consts.NOV],
+  //     },
+  //   ],
+  // },
 ];
 
 // Build list of sports

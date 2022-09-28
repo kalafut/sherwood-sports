@@ -14,7 +14,9 @@
       <h5 class="card-title">
         <div class="d-flex justify-content-between">
           {#if org.url}
-            <a class="text-decoration-none" href={org.url}>{org.name}</a>
+            <a class="text-decoration-none" href={org.url} target="_blank">
+              {org.name}
+            </a>
           {:else}
             {org.name}
           {/if}
@@ -24,7 +26,7 @@
         </div>
       </h5>
       {#if org.summary}
-        <p class="card-text">{org.summary}</p>
+        <p class="card-text">{@html org.summary}</p>
       {/if}
       <ul class="list-group list-group-flush">
         {#each org.programs as program (hash(program))}
@@ -33,8 +35,12 @@
             class:list-group-item-success={isUpcoming(m, program.season)}>
             <div class="col d-flex align-items-start justify-content-start">
               {#if program.url}
-                <a class="text-decoration-none" href={program.url}
-                  >{program.name}</a>
+                <a
+                  class="text-decoration-none"
+                  href={program.url}
+                  target="_blank">
+                  {program.name}
+                </a>
               {:else}
                 {program.name}
               {/if}

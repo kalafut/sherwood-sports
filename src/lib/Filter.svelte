@@ -1,7 +1,7 @@
 <script>
   import SportsFilter from "./SportsFilter.svelte";
   import AgeFilter from "./AgeFilter.svelte";
-  import LocalOnlyFilter from "./LocalOnlyFilter.svelte";
+  import LocationFilter from "./LocationFilter.svelte";
   import SeasonFilter from "./SeasonFilter.svelte";
   import { resetFilters } from "../stores";
 </script>
@@ -35,7 +35,7 @@
     </div>
     <h5>Location</h5>
     <div class="mb-4">
-      <LocalOnlyFilter />
+      <LocationFilter />
     </div>
     <button class="btn btn-danger" type="button" on:click={resetFilters}>
       Reset
