@@ -11,6 +11,7 @@ const LACROSSE = "Lacrosse",
   GYMNASTICS = "Gymnastics",
   MARTIAL_ARTS = "Martial Arts",
   SOCCER = "Soccer",
+  WRESTLING = "Wrestling",
   __END = "";
 
 const baseOrgs: OrgList = [
@@ -478,6 +479,24 @@ const baseOrgs: OrgList = [
   //     },
   //   ],
   // },
+
+  /**
+   * Wrestling
+   */
+  {
+    name: "Sherwood Wrestling",
+    url: "https://www.sherwoodwrestling.com",
+    sport: WRESTLING,
+    reviewed: "2022-09-29",
+    programs: [
+      {
+        name: "Boys/Girls Wrestling",
+        season: [consts.OCT, consts.FEB],
+        gradeMin: 0,
+        gradeMax: 12,
+      },
+    ],
+  },
 ];
 
 // Build list of sports
