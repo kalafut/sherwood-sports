@@ -11,7 +11,7 @@
   {#if season === consts.CHECK_SITE}
     <span />
   {:else if allYear(season)}
-    Year round
+    <span />
   {:else if season}
     {`${monthStr(season[0])}–${monthStr(season[1])}`}
   {:else}
