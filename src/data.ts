@@ -117,6 +117,35 @@ const baseOrgs: OrgList = [
    * Gymnastics
    */
   {
+    name: "Jewart's Gymnastics NW",
+    url: "https://jewartsgymnasticsnw.com",
+    sport: GYMNASTICS,
+    location: "Wilsonville",
+    reviewed: "2022-09-29",
+    programs: [
+      {
+        name: "Wobbler and Walker",
+        url: "https://jewartsgymnasticsnw.com/class-descriptions",
+        season: consts.ALL_YEAR,
+        ageMax: 3,
+      },
+      {
+        name: "Preschool",
+        url: "https://jewartsgymnasticsnw.com/class-descriptions",
+        season: consts.ALL_YEAR,
+        ageMin: 3,
+        ageMax: 6,
+      },
+      {
+        name: "Recreational",
+        url: "https://jewartsgymnasticsnw.com/class-descriptions",
+        season: consts.ALL_YEAR,
+        ageMin: 6,
+        ageMax: 12,
+      },
+    ],
+  },
+  {
     name: "Metro Gymnastics",
     url: "https://www.metrogymnastics.com",
     sport: GYMNASTICS,
