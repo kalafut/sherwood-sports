@@ -22,6 +22,23 @@ function errorCheck(): string[] {
       );
     }
 
+    // Check that sport is defined either at the org, or (and only) on every program
+    const someProgsHaveSport = org.programs.some((p) => p.sport !== undefined);
+    const everyProgHasSport = org.programs.every((p) => p.sport !== undefined);
+    if (org.sport === undefined) {
+      if (!everyProgHasSport) {
+        errors.push(
+          `Sports data error: <strong>${org.name}</strong> must have sports defined at the Org level or for every Program.`
+        );
+      }
+    } else {
+      if (someProgsHaveSport) {
+        errors.push(
+          `Sports data error: <strong>${org.name}</strong> has sports defined at the Org and Program level. Only one is allowed.`
+        );
+      }
+    }
+
     const programNames = new Set<string>();
     org.programs.forEach((program) => {
       // Check for duplicate program names

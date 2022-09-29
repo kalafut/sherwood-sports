@@ -72,14 +72,14 @@ const baseOrgs: OrgList = [
     ],
   },
   {
-    name: "MVP Sports [basketball]",
+    name: "MVP Sports",
     url: "https://mvpsl.com",
-    sport: BASKETBALL,
     reviewed: "2022-09-29",
     location: "Tualatin",
     programs: [
       {
         name: "Fall Basketball",
+        sport: BASKETBALL,
         url: "https://mvpsl.com/basketball",
         season: [consts.NOV, consts.DEC],
         gradeMin: 0,
@@ -87,10 +87,35 @@ const baseOrgs: OrgList = [
       },
       {
         name: "Winter Basketball",
+        sport: BASKETBALL,
         url: "https://mvpsl.com/basketball",
         season: [consts.JAN, consts.FEB],
         gradeMin: 0,
         gradeMax: 3,
+      },
+      {
+        name: "Fall Flag Football",
+        sport: FOOTBALL,
+        url: "https://mvpsl.com/flag-football",
+        season: [consts.SEP, consts.OCT],
+        gradeMin: 0,
+        gradeMax: 12,
+      },
+      {
+        name: "Spring Flag Football",
+        sport: FOOTBALL,
+        url: "https://mvpsl.com/flag-football",
+        season: [consts.APR, consts.JUN],
+        gradeMin: 0,
+        gradeMax: 12,
+      },
+      {
+        name: "Summer Flag Football",
+        sport: FOOTBALL,
+        url: "https://mvpsl.com/flag-football",
+        season: [consts.JUN, consts.JUL],
+        gradeMin: 0,
+        gradeMax: 12,
       },
     ],
   },
@@ -136,36 +161,6 @@ const baseOrgs: OrgList = [
         season: [consts.SEP, consts.NOV],
         gradeMin: 3,
         gradeMax: 8,
-      },
-    ],
-  },
-  {
-    name: "MVP Sports [football]",
-    url: "https://mvpsl.com",
-    sport: FOOTBALL,
-    reviewed: "2022-09-29",
-    location: "Tualatin",
-    programs: [
-      {
-        name: "Fall Flag Football",
-        url: "https://mvpsl.com/flag-football",
-        season: [consts.SEP, consts.OCT],
-        gradeMin: 0,
-        gradeMax: 12,
-      },
-      {
-        name: "Spring Flag Football",
-        url: "https://mvpsl.com/flag-football",
-        season: [consts.APR, consts.JUN],
-        gradeMin: 0,
-        gradeMax: 12,
-      },
-      {
-        name: "Summer Flag Football",
-        url: "https://mvpsl.com/flag-football",
-        season: [consts.JUN, consts.JUL],
-        gradeMin: 0,
-        gradeMax: 12,
       },
     ],
   },
@@ -421,7 +416,6 @@ const baseOrgs: OrgList = [
     ],
   },
   {
-    sport: SOCCER,
     name: "Tualatin Indoor Soccer",
     summary: "Nearby soccer",
     url: "https://www.tualatinindoor.com",
@@ -430,6 +424,7 @@ const baseOrgs: OrgList = [
         name: "Youth Indoor League",
         url: "https://www.tualatinindoor.com/schedules/youth-league-information",
         season: [consts.MAR, consts.MAY],
+        sport: SOCCER,
       },
       {
         name: "SoccerKids (Fall)",
@@ -437,6 +432,7 @@ const baseOrgs: OrgList = [
         season: [consts.SEP, consts.NOV],
         ageMin: 2,
         ageMax: 10,
+        sport: BASEBALL,
       },
     ],
     location: "Tualatin",
@@ -502,7 +498,7 @@ const baseOrgs: OrgList = [
 // Build list of sports
 const _orgs = new Set<string>();
 baseOrgs.forEach((v) => _orgs.add(v.sport));
-export const sports = Array.from(_orgs);
+export const sports = Array.from(_orgs).filter((s) => s !== undefined);
 sports.sort();
 
 // Sort orgs
