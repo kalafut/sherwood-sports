@@ -99,6 +99,10 @@ export class ImmutableStringSet {
     this.set.delete(v);
     return new ImmutableStringSet(Array.from(this.set.values()));
   }
+
+  public get size(): number {
+    return this.set.size;
+  }
 }
 
 export function isUpcoming(
