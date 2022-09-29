@@ -25,7 +25,7 @@ export type OrgList = Org[];
 export interface Org {
   name: string;
   summary?: string;
-  sport: string;
+  sport?: string;
   programs: Program[];
   id?: string;
   url?: string;

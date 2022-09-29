@@ -63,12 +63,6 @@ export function gradeToAge(grade: number, max: boolean) {
   return grade + offset;
 }
 
-export function sportsFilter(org: Org): boolean {
-  const sportsFilter = new Set(); //useStore.getState().sportsFilter;
-
-  return sportsFilter.has(org.sport);
-}
-
 export function seasonFunctionalFilter(program: Program, seasons) {
   if (!program.season || allYear(program.season)) {
     return true;

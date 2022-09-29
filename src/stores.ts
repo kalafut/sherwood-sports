@@ -35,15 +35,14 @@ export const filteredOrgs = derived(
       (org: Org) => lof(org, $localOnlyFilter),
 
       // Sports
-      (org: Org): boolean => {
-        return $sportsFilter.has(org.sport);
-      },
+      (org: Org): boolean => !org.sport || $sportsFilter.has(org.sport),
       emptyProgramsFilter,
     ];
 
     let programFilters: ProgramFilter[] = [
       (program: Program) => ageFunctionalFilter(program, $ageRange),
       (program: Program) => seasonFunctionalFilter(program, $seasonFilter),
+      (program: Program) => !program.sport || $sportsFilter.has(program.sport),
     ];
 
     return filteredOrgsFn(allOrgs, orgFilters, programFilters);
