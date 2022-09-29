@@ -2,13 +2,15 @@ import * as consts from "./consts";
 import type { OrgList } from "./types";
 
 const LACROSSE = "Lacrosse",
-  BASKETBALL = "Basketball",
-  SOCCER = "Soccer",
   // SAMPLE = "Sample",
-  MARTIAL_ARTS = "Martial Arts",
-  CHEER = "Cheer",
   BASEBALL = "Baseball",
-  GOLF = "Golf";
+  BASKETBALL = "Basketball",
+  CHEER = "Cheer",
+  GOLF = "Golf",
+  GYMNASTICS = "Gymnastics",
+  MARTIAL_ARTS = "Martial Arts",
+  SOCCER = "Soccer",
+  __END = "";
 
 const baseOrgs: OrgList = [
   /**
@@ -16,12 +18,28 @@ const baseOrgs: OrgList = [
    */
   {
     name: "Sherwood Junior Baseball",
+    summary:
+      "Note: some competitive tryouts can start many months in advance. Check SJB site for details.",
     url: "https://www.sherwoodjuniorbaseball.com",
     sport: BASEBALL,
+    reviewed: "2022-09-28",
     programs: [
       {
         name: "T-Ball",
         gradeMax: 0,
+        season: [consts.APR, consts.JUN],
+      },
+      {
+        name: "Recreational",
+        gradeMin: 1,
+        gradeMax: 3,
+        season: [consts.APR, consts.JUN],
+      },
+      {
+        name: "Competitive",
+        gradeMin: 3,
+        gradeMax: 8,
+        season: [consts.MAR, consts.JUN],
       },
     ],
   },
@@ -91,6 +109,72 @@ const baseOrgs: OrgList = [
         url: "https://www.tualatinislandgreens.com/lessons.html",
         season: consts.ALL_YEAR,
         ageMin: 18,
+      },
+    ],
+  },
+
+  /**
+   * Gymnastics
+   */
+  {
+    name: "Metro Gymnastics",
+    url: "https://www.metrogymnastics.com",
+    sport: GYMNASTICS,
+    location: "Tigard",
+    reviewed: "2022-09-28",
+    programs: [
+      {
+        name: "Mini Movers",
+        url: "https://www.metrogymnastics.com/minimovers",
+        season: consts.ALL_YEAR,
+        ageMin: 2,
+        ageMax: 6,
+      },
+      {
+        name: "Recreational",
+        url: "https://www.metrogymnastics.com/recreational-gymnastics-programs",
+        season: consts.ALL_YEAR,
+        ageMin: 6,
+        ageMax: 17,
+      },
+      {
+        name: "Boy's competitive",
+        url: "https://www.metrogymnastics.com/boys-team-gymnastics-program",
+        season: consts.ALL_YEAR,
+      },
+      {
+        name: "Girls's competitive",
+        url: "https://www.metrogymnastics.com/girls-team-gymnastics",
+        season: consts.ALL_YEAR,
+      },
+    ],
+  },
+  {
+    name: "Tumblebears Children's Gym",
+    url: "https://www.tumblebearschildrensgym.com",
+    sport: GYMNASTICS,
+    reviewed: "2022-09-28",
+    programs: [
+      {
+        name: "Tumbling",
+        url: "https://www.tumblebearschildrensgym.com/services",
+        season: consts.ALL_YEAR,
+        ageMin: 3,
+        ageMax: 13,
+      },
+      {
+        name: "Ninja (tumbling w/games)",
+        url: "https://www.tumblebearschildrensgym.com/services",
+        season: consts.ALL_YEAR,
+        ageMin: 3,
+        ageMax: 13,
+      },
+      {
+        name: "Parent and Me",
+        url: "https://www.tumblebearschildrensgym.com/services",
+        season: consts.ALL_YEAR,
+        ageMin: 1,
+        ageMax: 5,
       },
     ],
   },

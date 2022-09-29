@@ -20,7 +20,6 @@
   <li>
     Email: <a href="mailto:jim@sherwoodsports.org">jim@sherwoodsports.org</a>
   </li>
-  <li>Google Feedback form (optionally anonymous)</li>
   <li>
     <a href="https://github.com/kalafut/sherwood-sports">GitHub</a> (much more technical)
   </li>
