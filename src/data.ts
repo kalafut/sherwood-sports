@@ -6,6 +6,7 @@ const LACROSSE = "Lacrosse",
   BASEBALL = "Baseball",
   BASKETBALL = "Basketball",
   CHEER = "Cheer",
+  FOOTBALL = "Football",
   GOLF = "Golf",
   GYMNASTICS = "Gymnastics",
   MARTIAL_ARTS = "Martial Arts",
@@ -69,6 +70,29 @@ const baseOrgs: OrgList = [
       },
     ],
   },
+  {
+    name: "MVP Sports [basketball]",
+    url: "https://mvpsl.com",
+    sport: BASKETBALL,
+    reviewed: "2022-09-29",
+    location: "Tualatin",
+    programs: [
+      {
+        name: "Fall Basketball",
+        url: "https://mvpsl.com/basketball",
+        season: [consts.NOV, consts.DEC],
+        gradeMin: 0,
+        gradeMax: 3,
+      },
+      {
+        name: "Winter Basketball",
+        url: "https://mvpsl.com/basketball",
+        season: [consts.JAN, consts.FEB],
+        gradeMin: 0,
+        gradeMax: 3,
+      },
+    ],
+  },
 
   /**
    * Cheer
@@ -89,6 +113,62 @@ const baseOrgs: OrgList = [
       },
     ],
   },
+  /**
+   * Football
+   */
+  {
+    name: "Sherwood Youth Football",
+    url: "https://www.sherwoodyouthfootball.com",
+    sport: FOOTBALL,
+    reviewed: "2022-09-29",
+    reviewNotes: "Currently the tackle information link is broken.",
+    programs: [
+      {
+        name: "Flag Football",
+        url: "https://www.sherwoodyouthfootball.com/flag",
+        season: [consts.SEP, consts.OCT],
+        gradeMin: 0,
+        gradeMax: 4,
+      },
+      {
+        name: "Tackle Football",
+        season: [consts.SEP, consts.NOV],
+        gradeMin: 3,
+        gradeMax: 8,
+      },
+    ],
+  },
+  {
+    name: "MVP Sports [football]",
+    url: "https://mvpsl.com",
+    sport: FOOTBALL,
+    reviewed: "2022-09-29",
+    location: "Tualatin",
+    programs: [
+      {
+        name: "Fall Flag Football",
+        url: "https://mvpsl.com/flag-football",
+        season: [consts.SEP, consts.OCT],
+        gradeMin: 0,
+        gradeMax: 12,
+      },
+      {
+        name: "Spring Flag Football",
+        url: "https://mvpsl.com/flag-football",
+        season: [consts.APR, consts.JUN],
+        gradeMin: 0,
+        gradeMax: 12,
+      },
+      {
+        name: "Summer Flag Football",
+        url: "https://mvpsl.com/flag-football",
+        season: [consts.JUN, consts.JUL],
+        gradeMin: 0,
+        gradeMax: 12,
+      },
+    ],
+  },
+
   /**
    * Golf
    */
