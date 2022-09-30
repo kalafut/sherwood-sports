@@ -383,11 +383,11 @@ export const orgs: OrgList = [
     ],
   },
   {
-    name: "Westside Timbers",
+    name: "Westside Metros",
     url: "https://www.westsidetimbers.org/",
     sport: SOCCER,
     summary:
-      "WT offers a large number of development and competitive programs throughout the year in Beaverton, Sherwood and Tualatin. See their site for details.",
+      "Westside Metros (formerly Timbers) offers a large number of development and competitive programs throughout the year in Beaverton, Sherwood and Tualatin. See their site for details.",
     reviewed: "2022-09-28",
     programs: [
       {
