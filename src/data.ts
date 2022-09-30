@@ -76,6 +76,42 @@ export const orgs: OrgList = [
     ],
   },
   {
+    name: "The Practice Facility [basketball]",
+    sport: BASKETBALL,
+    url: "https://www.thepracticefacility.com/",
+    reviewed: "2022-09-30",
+    location: "Tigard",
+    programs: [
+      {
+        name: "Skills Clinics",
+        url: "https://www.thepracticefacility.com/skills-clinics",
+        season: consts.ALL_YEAR,
+        gradeMin: 3,
+        gradeMax: 12,
+      },
+      {
+        name: "B.A.S.E Training",
+        url: "https://www.thepracticefacility.com/base",
+        season: consts.ALL_YEAR,
+        gradeMin: 3,
+        gradeMax: 5,
+      },
+      {
+        name: "Fly Academy (teams)",
+        url: "https://www.thepracticefacility.com/team-fly",
+        season: consts.ALL_YEAR,
+        gradeMin: 2,
+        gradeMax: 12,
+      },
+      {
+        name: "Shot Lab",
+        url: "https://www.thepracticefacility.com/shot-lab",
+        season: consts.ALL_YEAR,
+        allAges: true,
+      },
+    ],
+  },
+  {
     name: "MVP Sports",
     url: "https://mvpsl.com",
     reviewed: "2022-09-29",
