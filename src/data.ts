@@ -12,6 +12,7 @@ const LACROSSE = "Lacrosse",
   GYMNASTICS = "Gymnastics",
   MARTIAL_ARTS = "Martial Arts",
   SOCCER = "Soccer",
+  SOFTBALL = "Softball",
   WRESTLING = "Wrestling",
   __END = "";
 
@@ -491,22 +492,20 @@ export const orgs: OrgList = [
   },
   {
     name: "Tualatin Indoor Soccer",
-    summary: "Nearby soccer",
     url: "https://www.tualatinindoor.com",
     reviewed: "2022-09-30",
+    sport: SOCCER,
     programs: [
       {
         name: "Youth Indoor League (Fall)",
         url: "https://www.tualatinindoor.com/schedules/youth-league-information",
         season: [consts.NOV, consts.JAN],
-        sport: SOCCER,
         ageMin: 6,
       },
       {
         name: "Adult Indoor League (Fall)",
         url: "https://www.tualatinindoor.com/schedules/adult-league-information",
         season: [consts.NOV, consts.JAN],
-        sport: SOCCER,
         ageMin: 18,
       },
       {
@@ -515,10 +514,40 @@ export const orgs: OrgList = [
         season: [consts.SEP, consts.NOV],
         ageMin: 2,
         ageMax: 10,
-        sport: SOCCER,
       },
     ],
     location: "Tualatin",
+  },
+  /**
+   * Softball
+   */
+  {
+    name: "Sherwood Fireballs [softball]",
+    url: "https://www.sherwoodfireballs.com",
+    sport: SOFTBALL,
+    reviewed: "2022-09-30",
+    programs: [
+      {
+        name: "T-Ball",
+        url: "https://www.sherwoodfireballs.com/Default.aspx?tabid=989735",
+        gradeMax: 0,
+        season: [consts.APR, consts.MAY],
+      },
+      {
+        name: "Recreational",
+        url: "https://www.sherwoodfireballs.com/Default.aspx?tabid=989735",
+        gradeMin: 1,
+        gradeMax: 8,
+        season: [consts.MAY, consts.JUL],
+      },
+      {
+        name: "Competitive",
+        url: "https://www.sherwoodfireballs.com/Default.aspx?tabid=989736",
+        ageMin: 6,
+        ageMax: 18,
+        season: [consts.MAY, consts.JUL],
+      },
+    ],
   },
   // /**
   //  * Sample Data
