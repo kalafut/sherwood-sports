@@ -383,6 +383,40 @@ export const orgs: OrgList = [
     ],
   },
   {
+    name: "Impact Jiu Jitsu",
+    url: "https://impactjjsherwood.com",
+    sport: MARTIAL_ARTS,
+    reviewed: "2022-09-30",
+    programs: [
+      {
+        name: "Brazilian Jiu Jitsu",
+        url: "https://impactjjsherwood.com/classes",
+        ageMin: 7,
+        season: consts.ALL_YEAR,
+      },
+      {
+        name: "No Gi Submission Grappling",
+        url: "https://impactjjsherwood.com/classes",
+        ageMin: 7,
+        season: consts.ALL_YEAR,
+      },
+      {
+        name: "Anti Bully Training",
+        url: "https://impactjjsherwood.com/classes",
+        ageMin: 7,
+        ageMax: 15,
+        season: consts.ALL_YEAR,
+      },
+      {
+        name: "Code 4 Concepts (Police Jiu Jitsu)",
+        url: "https://impactjjsherwood.com/classes",
+        ageMin: 18,
+        season: consts.ALL_YEAR,
+      },
+    ],
+  },
+
+  {
     name: "Westside Metros",
     url: "https://www.westsidetimbers.org/",
     sport: SOCCER,
