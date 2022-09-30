@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { monthStr, allYear } from "../util";
   import QuestionCircle from "svelte-bootstrap-icons/lib/QuestionCircle.svelte";
   import * as consts from "../consts";

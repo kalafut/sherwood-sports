@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import SportsFilter from "./SportsFilter.svelte";
   import AgeFilter from "./AgeFilter.svelte";
   import LocationFilter from "./LocationFilter.svelte";

@@ -1,48 +1,32 @@
-# Svelte + Vite
+# Sherwood Sports
 
-This template should help get you started developing with Svelte in Vite.
+This is source for the [Sherwood Sports](https://sherwoodsports.org) website.
 
-## Recommended IDE Setup
+Feel free to open issues here for data additions, corrections, or website bugs and improvement requests. If you ended up here and aren't familiar with GitHub, you can also simply write us at jim@sherwoodsports.org with your question or suggestion.
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## App Details
 
-## Need an official Svelte framework?
+If you're more technically inclined and want to submit PRs, here is some background to get you started:
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+* The app is written using [Svelte](https://svelte.dev), [TypeScript](https://www.typescriptlang.org) and [Bootstrap](https://getbootstrap.com)
+* **All** sports data for the site is in [data.ts](https://github.com/kalafut/sherwood-sports/blob/main/src/data.ts). PR against that file if you want to directly make data updates.
+* The site is built and deployed using GitHub pages against the `gh-pages` branch. This is currently done manually, but I want to get GitHub Actions set up soon.
 
-## Technical considerations
+## Local Development
 
-**Why use this over SvelteKit?**
+### Clone repo and install deps
+```
+git clone git@github.com:kalafut/sherwood-sports.git
+cd sherwood-sports
+npm install
+```
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-  `vite dev` and `vite build` wouldn't work in a SvelteKit environment, for example.
+### Run dev build
+```
+npm run dev -- --host  # the `-- --host` is optional but allows for easy testing with a mobile device on the LAN
+```
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
-
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `checkJs` in the JS template?**
-
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+### Build/publish
+```
+npm run publish        # alternatively, `npm run build` will just build
 ```

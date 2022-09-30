@@ -1,10 +1,11 @@
 <script>
+  const welcomeAlertVersion = "2";
   const welcomeAlert = document.getElementById("welcome-alert");
 
-  let welcomeAlertShown = localStorage.welcomeAlertShown == "1";
+  let welcomeAlertShown = localStorage.welcomeAlertShown == welcomeAlertVersion;
 
   const closeHandler = () => {
-    localStorage.welcomeAlertShown = "1";
+    localStorage.welcomeAlertShown = welcomeAlertVersion;
   };
 </script>
 
@@ -14,14 +15,14 @@
     class="fs-5 alert alert-info alert-dismissible fade show"
     role="alert">
     <p>
-      Thanks for visiting <span class="fw-bold">Sherwood Sports</span>!
+      Thanks for visiting <span class="fw-bold">Sherwood Sports</span>! The site
+      is still being built and data added, but it's ready enough for public
+      feedback.
     </p>
-
     <p>
-      The site is still in development, but it's ready for public use. Skim
-      through the <a href="#about">About</a> page for an intro, or just browse
-      around! If you have issues or questions, please
-      <a href="#contribute">reach out</a>.
+      Skim through the <a href="#about">About</a> page for an intro, or just
+      browse around! If you have issues or questions, please
+      <a href="mailto:jim@sherwoodsports.org">reach out</a>.
     </p>
     Enjoy!
     <button

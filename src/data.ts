@@ -1,5 +1,6 @@
 import * as consts from "./consts";
 import type { OrgList } from "./types";
+import ymca from "./data/ymca";
 
 const LACROSSE = "Lacrosse",
   // SAMPLE = "Sample",
@@ -14,7 +15,7 @@ const LACROSSE = "Lacrosse",
   WRESTLING = "Wrestling",
   __END = "";
 
-const baseOrgs: OrgList = [
+export const orgs: OrgList = [
   /**
    * Baseball
    */
@@ -28,17 +29,20 @@ const baseOrgs: OrgList = [
     programs: [
       {
         name: "T-Ball",
+        url: "https://www.sherwoodjuniorbaseball.com/Default.aspx?tabid=494177",
         gradeMax: 0,
         season: [consts.APR, consts.JUN],
       },
       {
         name: "Recreational",
+        url: "https://www.sherwoodjuniorbaseball.com/Default.aspx?tabid=494177",
         gradeMin: 1,
         gradeMax: 3,
         season: [consts.APR, consts.JUN],
       },
       {
         name: "Competitive",
+        url: "https://www.sherwoodjuniorbaseball.com/Default.aspx?tabid=494177",
         gradeMin: 3,
         gradeMax: 8,
         season: [consts.MAR, consts.JUN],
@@ -169,7 +173,7 @@ const baseOrgs: OrgList = [
    * Golf
    */
   {
-    name: "Tualatin Island Greens",
+    name: "Tualatin Island Greens Golf",
     url: "https://www.tualatinislandgreens.com/",
     sport: GOLF,
     reviewed: "2022-09-28",
@@ -419,12 +423,21 @@ const baseOrgs: OrgList = [
     name: "Tualatin Indoor Soccer",
     summary: "Nearby soccer",
     url: "https://www.tualatinindoor.com",
+    reviewed: "2022-09-30",
     programs: [
       {
-        name: "Youth Indoor League",
+        name: "Youth Indoor League (Fall)",
         url: "https://www.tualatinindoor.com/schedules/youth-league-information",
-        season: [consts.MAR, consts.MAY],
+        season: [consts.NOV, consts.JAN],
         sport: SOCCER,
+        ageMin: 6,
+      },
+      {
+        name: "Adult Indoor League (Fall)",
+        url: "https://www.tualatinindoor.com/schedules/adult-league-information",
+        season: [consts.NOV, consts.JAN],
+        sport: SOCCER,
+        ageMin: 18,
       },
       {
         name: "SoccerKids (Fall)",
@@ -432,7 +445,7 @@ const baseOrgs: OrgList = [
         season: [consts.SEP, consts.NOV],
         ageMin: 2,
         ageMax: 10,
-        sport: BASEBALL,
+        sport: SOCCER,
       },
     ],
     location: "Tualatin",
@@ -495,14 +508,30 @@ const baseOrgs: OrgList = [
   },
 ];
 
+orgs.push(...ymca);
+
 // Build list of sports
-const _orgs = new Set<string>();
-baseOrgs.forEach((v) => _orgs.add(v.sport));
-export const sports = Array.from(_orgs).filter((s) => s !== undefined);
+const _sports = new Set<string>();
+orgs.forEach((o) => {
+  _sports.add(o.sport);
+  o.programs.forEach((p) => _sports.add(p.sport));
+});
+export const sports = Array.from(_sports).filter((s) => s !== undefined);
 sports.sort();
 
 // Sort orgs
-export const orgs = [...baseOrgs];
 orgs.sort((a, b) => {
+  if (a.location === undefined && b.location) {
+    return -1;
+  }
+  if (b.location === undefined && a.location) {
+    return 1;
+  }
+
+  const progLenDiff = a.programs.length - b.programs.length;
+  if (progLenDiff !== 0) {
+    return progLenDiff;
+  }
+
   return a.name.localeCompare(b.name);
 });

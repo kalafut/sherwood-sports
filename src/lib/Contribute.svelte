@@ -5,27 +5,28 @@
 
 <BackLink />
 
-<h4 class="my-2">Who runs this?</h4>
 <p>
-  This site is a volunteer effort by me (Jim). All of the data for the site is
-  curated manually from each organization website (or Facebook page, or whatever
-  they have). You may have noticed that some of these sites aren't kept up, can
-  be a challenge to navigate, or link out to third party registration sites. A
-  steady effort is needed to keep data on Sherwood Sports up-to-date, and I
-  welcome your help!
+  All of the data for the site is curated manually from each organization
+  website (or Facebook page, or whatever they have). You may have noticed that
+  some of these sites aren't kept up, can be a challenge to navigate, or link
+  out to third party registration sites. A steady effort is needed to keep data
+  on Sherwood Sports up-to-date, and I welcome your help!
 </p>
+<p>You can contact me via:</p>
 
-<p>You can reach a out a few ways with questions or contributions:</p>
 <ul>
   <li>
     Email: <a href="mailto:jim@sherwoodsports.org">jim@sherwoodsports.org</a>
   </li>
   <li>
-    <a href="https://github.com/kalafut/sherwood-sports">GitHub</a> (much more technical)
+    Site project: <a href="https://github.com/kalafut/sherwood-sports">
+      GitHub
+    </a> (much more technical)
   </li>
 </ul>
 
 <h4 class="my-4">Ways to contribute</h4>
+<p>Any help is welcome. Here are some ideas:</p>
 <p>
   <strong>Discovery.</strong>
   Have I missed some organizations, or have new ones opened up? Please let me know
@@ -43,8 +44,8 @@
 
 <p>
   <strong>General Feedback</strong>. Are there bugs with the site itself, or
-  ways it could work better? It is completely custom so let me know what ideas
-  you have for how I can improve it.
+  ways it could work better? Maybe the design or UX could be improved? It is
+  completely custom so let me know what ideas you have.
 </p>
 
 <p>
