@@ -29,17 +29,20 @@ export const orgs: OrgList = [
     programs: [
       {
         name: "T-Ball",
+        url: "https://www.sherwoodjuniorbaseball.com/Default.aspx?tabid=494177",
         gradeMax: 0,
         season: [consts.APR, consts.JUN],
       },
       {
         name: "Recreational",
+        url: "https://www.sherwoodjuniorbaseball.com/Default.aspx?tabid=494177",
         gradeMin: 1,
         gradeMax: 3,
         season: [consts.APR, consts.JUN],
       },
       {
         name: "Competitive",
+        url: "https://www.sherwoodjuniorbaseball.com/Default.aspx?tabid=494177",
         gradeMin: 3,
         gradeMax: 8,
         season: [consts.MAR, consts.JUN],
