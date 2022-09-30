@@ -170,7 +170,7 @@ export const orgs: OrgList = [
    * Golf
    */
   {
-    name: "Tualatin Island Greens",
+    name: "Tualatin Island Greens Golf",
     url: "https://www.tualatinislandgreens.com/",
     sport: GOLF,
     reviewed: "2022-09-28",
@@ -524,5 +524,11 @@ orgs.sort((a, b) => {
   if (b.location === undefined && a.location) {
     return 1;
   }
+
+  const progLenDiff = a.programs.length - b.programs.length;
+  if (progLenDiff !== 0) {
+    return progLenDiff;
+  }
+
   return a.name.localeCompare(b.name);
 });
