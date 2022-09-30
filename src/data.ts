@@ -48,6 +48,13 @@ export const orgs: OrgList = [
         gradeMax: 8,
         season: [consts.MAR, consts.JUN],
       },
+      {
+        name: "Fall Ball",
+        url: "https://www.sherwoodjuniorbaseball.com/Default.aspx?tabid=494177",
+        gradeMin: 3,
+        gradeMax: 8,
+        season: [consts.AUG, consts.OCT],
+      },
     ],
   },
 
