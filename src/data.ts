@@ -1,5 +1,7 @@
 import * as consts from "./consts";
 import type { OrgList } from "./types";
+
+import { orgs as volleyball } from "./data/volleyball";
 import ymca from "./data/ymca";
 
 const LACROSSE = "Lacrosse",
@@ -463,7 +465,7 @@ export const orgs: OrgList = [
   },
 
   {
-    name: "Westside Metros",
+    name: "Westside Metros [soccer]",
     url: "https://www.westsidetimbers.org/",
     sport: SOCCER,
     summary:
@@ -561,53 +563,6 @@ export const orgs: OrgList = [
       },
     ],
   },
-  /**
-   * Volleyball
-   */
-  {
-    name: "West Linn - Wilsonville Youth Volleyball",
-    url: "https://www.westlinnwilsonvilleyouthvolleyballprogram.com",
-    sport: VOLLEYBALL,
-    location: "West Linn",
-    reviewed: "2022-09-30",
-    programs: [
-      {
-        name: "Fall Recreational",
-        url: "https://www.westlinnwilsonvilleyouthvolleyballprogram.com/fallleague.html",
-        gradeMin: 3,
-        gradeMax: 8,
-        season: [consts.AUG, consts.OCT],
-      },
-    ],
-  },
-  {
-    name: "Athena Volleyball",
-    url: "https://www.athenavb.net",
-    sport: VOLLEYBALL,
-    location: "Tigard",
-    reviewed: "2022-09-30",
-    programs: [
-      {
-        name: "Girls Programs",
-        url: "https://www.athenavb.net/tryouts",
-        ageMin: 12,
-        ageMax: 18,
-        uAges: true,
-        season: [consts.DEC, consts.MAY],
-      },
-      {
-        name: "Boys Programs",
-        url: "https://www.athenavb.net/tryouts",
-      },
-      {
-        name: "Fall Clinics",
-        url: "https://www.athenavb.net/athenaclinics",
-        gradeMin: 0,
-        gradeMax: 8,
-        season: [consts.SEP, consts.OCT],
-      },
-    ],
-  },
 
   // /**
   //  * Sample Data
@@ -667,6 +622,7 @@ export const orgs: OrgList = [
   },
 ];
 
+orgs.push(...volleyball);
 orgs.push(...ymca);
 
 // Build list of sports
