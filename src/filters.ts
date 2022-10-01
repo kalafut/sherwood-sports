@@ -60,11 +60,12 @@ export function emptyProgramsFilter(org: Org): boolean {
   return org.programs.length > 0 || org.programs === consts.NO_PROGRAMS;
 }
 
-// TODO unexport this
-export function gradeToAge(grade: number, max: boolean) {
-  const offset = max ? 6 : 5;
+function gradeToAge(grade: number, max: boolean) {
+  if (grade === -1) {
+    return consts.MIN_FILTER_AGE;
+  }
 
-  return grade + offset;
+  return grade + (max ? 6 : 5);
 }
 
 export function seasonFunctionalFilter(program: Program, seasons) {

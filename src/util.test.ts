@@ -84,14 +84,17 @@ test("converts a program age or grade range into a string", () => {
   });
 
   const gradeTests = [
+    { gradeMin: -1, gradeMax: 1, expected: { text: "PreK–1st", color: I } },
     { gradeMin: 0, gradeMax: 1, expected: { text: "K–1st", color: I } },
     { gradeMin: 0, gradeMax: 2, expected: { text: "K–2nd", color: I } },
+    { gradeMin: 0, gradeMax: 0, expected: { text: "K", color: I } },
     { gradeMin: 2, gradeMax: 2, expected: { text: "2nd", color: I } },
-    { gradeMax: 2, expected: { text: "K–2nd", color: I } },
-    { gradeMax: 0, expected: { text: "K", color: I } },
+    { gradeMax: 2, expected: { text: "PreK–2nd", color: I } },
+    { gradeMax: 0, expected: { text: "PreK–K", color: I } },
+    { gradeMax: -1, expected: { text: "PreK", color: I } },
     { gradeMin: 1, gradeMax: 3, expected: { text: "1st–3rd", color: I } },
     { gradeMin: 3, gradeMax: 6, expected: { text: "3rd–6th", color: I } },
-    { gradeMax: 6, expected: { text: "K–6th", color: I } },
+    { gradeMax: 6, expected: { text: "PreK–6th", color: I } },
     { gradeMin: 3, expected: { text: "3rd+", color: I } },
     { gradeMin: 4, gradeMax: 4, expected: { text: "4th", color: I } },
     { expected: { text: "", color: I } },

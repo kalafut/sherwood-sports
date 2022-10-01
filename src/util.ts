@@ -33,11 +33,13 @@ const seasons: SeasonRange = {
 
 // courtesy of: https://stackoverflow.com/a/13627586
 export function ordinal(i: number | undefined) {
-  if (i === undefined) {
-    return;
-  }
-  if (i == 0) {
-    return "K";
+  switch (i) {
+    case undefined:
+      return;
+    case -1:
+      return "PreK";
+    case 0:
+      return "K";
   }
 
   var j = i % 10,
@@ -173,10 +175,10 @@ function gradeRangeStr(gradeMin: NumberMaybe, gradeMax: NumberMaybe): string {
       text = `${ordinal(gradeMin)}–${ordinal(gradeMax)}`;
     }
   } else if (hasMax) {
-    if (gradeMax == 0) {
-      text = "K";
+    if (gradeMax == -1) {
+      text = "PreK";
     } else {
-      text = `K–${ordinal(gradeMax)}`;
+      text = `PreK–${ordinal(gradeMax)}`;
     }
   } else if (hasMin) {
     text = `${ordinal(gradeMin)}+`;

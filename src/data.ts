@@ -32,6 +32,7 @@ export const orgs: OrgList = [
       {
         name: "T-Ball",
         url: "https://www.sherwoodjuniorbaseball.com/Default.aspx?tabid=494177",
+        gradeMin: 0,
         gradeMax: 0,
         season: [consts.APR, consts.JUN],
       },
@@ -538,7 +539,9 @@ export const orgs: OrgList = [
       {
         name: "T-Ball",
         url: "https://www.sherwoodfireballs.com/Default.aspx?tabid=989735",
+        gradeMin: -1,
         gradeMax: 0,
+
         season: [consts.APR, consts.MAY],
       },
       {
@@ -551,8 +554,9 @@ export const orgs: OrgList = [
       {
         name: "Competitive",
         url: "https://www.sherwoodfireballs.com/Default.aspx?tabid=989736",
-        ageMin: 6,
+        ageMin: 10,
         ageMax: 18,
+        uAges: true,
         season: [consts.MAY, consts.JUL],
       },
     ],
