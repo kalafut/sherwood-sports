@@ -569,6 +569,7 @@ export const orgs: OrgList = [
     url: "https://www.westlinnwilsonvilleyouthvolleyballprogram.com",
     sport: VOLLEYBALL,
     location: "West Linn",
+    reviewed: "2022-09-30",
     programs: [
       {
         name: "Fall Recreational",
@@ -584,6 +585,7 @@ export const orgs: OrgList = [
     url: "https://www.athenavb.net",
     sport: VOLLEYBALL,
     location: "Tigard",
+    reviewed: "2022-09-30",
     programs: [
       {
         name: "Girls Programs",
