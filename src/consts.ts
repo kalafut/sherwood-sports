@@ -27,3 +27,18 @@ export const INITIAL_SEASON_FILTER = {
   fall: true,
   winter: true,
 };
+
+export const LACROSSE = "Lacrosse",
+  // SAMPLE = "Sample",
+  BASEBALL = "Baseball",
+  BASKETBALL = "Basketball",
+  CHEER = "Cheer",
+  FOOTBALL = "Football",
+  GOLF = "Golf",
+  GYMNASTICS = "Gymnastics",
+  MARTIAL_ARTS = "Martial Arts",
+  SOCCER = "Soccer",
+  SOFTBALL = "Softball",
+  WRESTLING = "Wrestling",
+  VOLLEYBALL = "Volleyball",
+  __END = "";
