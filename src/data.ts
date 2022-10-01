@@ -579,6 +579,34 @@ export const orgs: OrgList = [
       },
     ],
   },
+  {
+    name: "Athena Volleyball",
+    url: "https://www.athenavb.net",
+    sport: VOLLEYBALL,
+    location: "Tigard",
+    programs: [
+      {
+        name: "Girls Programs",
+        url: "https://www.athenavb.net/tryouts",
+        ageMin: 12,
+        ageMax: 18,
+        uAges: true,
+        season: [consts.DEC, consts.MAY],
+      },
+      {
+        name: "Boys Programs",
+        url: "https://www.athenavb.net/tryouts",
+      },
+      {
+        name: "Fall Clinics",
+        url: "https://www.athenavb.net/athenaclinics",
+        gradeMin: 0,
+        gradeMax: 8,
+        season: [consts.SEP, consts.OCT],
+      },
+    ],
+  },
+
   // /**
   //  * Sample Data
   //  */
