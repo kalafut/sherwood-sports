@@ -14,6 +14,7 @@ export interface Program {
   gradeMax?: number;
   ageMin?: number;
   ageMax?: number;
+  uAges?: boolean;
   allAges?: boolean;
   effectiveAgeMin?: number;
   effectiveAgeMax?: number;

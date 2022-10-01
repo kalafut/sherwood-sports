@@ -56,7 +56,9 @@ function errorCheck(): string[] {
         (program.ageMin ||
           program.ageMax ||
           program.gradeMin ||
-          program.gradeMax) &&
+          program.gradeMax ||
+          program.uAgeMin ||
+          program.uAgeMax) &&
         program.allAges
       ) {
         errors.push(
@@ -64,12 +66,15 @@ function errorCheck(): string[] {
         );
       }
 
-      if (
-        (program.ageMin || program.ageMax) &&
-        (program.gradeMin || program.gradeMax)
-      ) {
+      let ageTypes = 0;
+
+      ageTypes += program.ageMin || program.ageMax ? 1 : 0;
+      ageTypes += program.gradeMin || program.gradeMax ? 1 : 0;
+      ageTypes += program.uAgeMin || program.uAgeMax ? 1 : 0;
+
+      if (ageTypes > 1) {
         errors.push(
-          `Invalid ages: <strong>${org.name}/${name}</strong> is specifying both age and grade limits`
+          `Invalid ages: <strong>${org.name}/${name}</strong> is specifying more than one type of age limit`
         );
       }
     });

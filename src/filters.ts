@@ -34,7 +34,11 @@ export function filteredOrgsFn(
   return newOrgs;
 }
 
-export function ageFunctionalFilter(program: Program, ageRange): boolean {
+export function ageFunctionalFilter(
+  program: Program,
+  ageRange,
+  uAge: boolean
+): boolean {
   const { min, max } = ageRange;
   const effectiveAgeMin =
     program.ageMin ||
@@ -45,7 +49,7 @@ export function ageFunctionalFilter(program: Program, ageRange): boolean {
     (program.gradeMax !== undefined && gradeToAge(program.gradeMax, true)) ||
     consts.MAX_FILTER_AGE;
 
-  return effectiveAgeMax >= min && effectiveAgeMin <= max;
+  return effectiveAgeMax >= min && (uAge || effectiveAgeMin <= max);
 }
 
 export function localOnlyFilter(org: Org, localOnly: boolean): boolean {
@@ -56,11 +60,12 @@ export function emptyProgramsFilter(org: Org): boolean {
   return org.programs.length > 0 || org.programs === consts.NO_PROGRAMS;
 }
 
-// TODO unexport this
-export function gradeToAge(grade: number, max: boolean) {
-  const offset = max ? 6 : 5;
+function gradeToAge(grade: number, max: boolean) {
+  if (grade === -1) {
+    return consts.MIN_FILTER_AGE;
+  }
 
-  return grade + offset;
+  return grade + (max ? 6 : 5);
 }
 
 export function seasonFunctionalFilter(program: Program, seasons) {

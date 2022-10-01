@@ -49,7 +49,7 @@
               <div class="col d-flex justify-content-end">
                 <Season {program} />
               </div>
-              <div class="col d-flex justify-content-end">
+              <div class="col ms-2 d-flex justify-content-end">
                 <AgeBadge {program} />
               </div>
             </div>

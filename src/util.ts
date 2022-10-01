@@ -33,11 +33,13 @@ const seasons: SeasonRange = {
 
 // courtesy of: https://stackoverflow.com/a/13627586
 export function ordinal(i: number | undefined) {
-  if (i === undefined) {
-    return;
-  }
-  if (i == 0) {
-    return "K";
+  switch (i) {
+    case undefined:
+      return;
+    case -1:
+      return "PreK";
+    case 0:
+      return "K";
   }
 
   var j = i % 10,
@@ -173,10 +175,10 @@ function gradeRangeStr(gradeMin: NumberMaybe, gradeMax: NumberMaybe): string {
       text = `${ordinal(gradeMin)}–${ordinal(gradeMax)}`;
     }
   } else if (hasMax) {
-    if (gradeMax == 0) {
-      text = "K";
+    if (gradeMax == -1) {
+      text = "PreK";
     } else {
-      text = `K–${ordinal(gradeMax)}`;
+      text = `PreK–${ordinal(gradeMax)}`;
     }
   } else if (hasMin) {
     text = `${ordinal(gradeMin)}+`;
@@ -184,23 +186,32 @@ function gradeRangeStr(gradeMin: NumberMaybe, gradeMax: NumberMaybe): string {
   return text;
 }
 
-function ageRangeStr(ageMin: NumberMaybe, ageMax: NumberMaybe): string {
+function ageRangeStr(
+  ageMin: NumberMaybe,
+  ageMax: NumberMaybe,
+  uAge: boolean = false
+): string {
   let text = "";
+  const uText = uAge ? "U" : "";
 
   const hasMin = ageMin !== undefined;
   const hasMax = ageMax !== undefined;
 
   if (hasMin && hasMax) {
     if (ageMin === ageMax) {
-      text = `${ageMin}`;
+      text = `${ageMin}${uText}`;
     } else {
-      text = `${ageMin}–${ageMax}`;
+      text = `${ageMin}${uText}–${ageMax}${uText}`;
     }
   } else if (hasMax) {
-    if (ageMax === 2) {
-      text = "2";
+    if (uText) {
+      text = `${ageMax}${uText}`;
     } else {
-      text = `2–${ageMax}`;
+      if (ageMax === 2) {
+        text = `2${uText}`;
+      } else {
+        text = `2${uText}–${ageMax}${uText}`;
+      }
     }
   } else if (hasMin) {
     text = `${ageMin}+`;
@@ -209,17 +220,16 @@ function ageRangeStr(ageMin: NumberMaybe, ageMax: NumberMaybe): string {
 }
 
 export function programAgeText(program: Program) {
-  let { allAges, ageMin, ageMax, gradeMin, gradeMax } = program;
+  let { allAges, ageMin, ageMax, uAges, gradeMin, gradeMax } = program;
 
   let text = "";
   let color = "info";
 
   if (allAges) {
     text = "All";
-    // color = "success";
     color = "primary";
   } else if (ageMin !== undefined || ageMax !== undefined) {
-    text = ageRangeStr(ageMin, ageMax);
+    text = ageRangeStr(ageMin, ageMax, uAges);
     color = "primary";
   } else if (gradeMin !== undefined || gradeMax !== undefined) {
     text = gradeRangeStr(gradeMin, gradeMax);
