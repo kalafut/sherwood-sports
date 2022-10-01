@@ -40,7 +40,8 @@ export const filteredOrgs = derived(
     ];
 
     let programFilters: ProgramFilter[] = [
-      (program: Program) => ageFunctionalFilter(program, $ageRange),
+      (program: Program) =>
+        ageFunctionalFilter(program, $ageRange, program.uAges),
       (program: Program) => seasonFunctionalFilter(program, $seasonFilter),
       (program: Program) => !program.sport || $sportsFilter.has(program.sport),
     ];
