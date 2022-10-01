@@ -564,6 +564,7 @@ export const orgs: OrgList = [
     name: "West Linn - Wilsonville Youth Volleyball",
     url: "https://www.westlinnwilsonvilleyouthvolleyballprogram.com",
     sport: VOLLEYBALL,
+    location: "West Linn",
     programs: [
       {
         name: "Fall Recreational",
