@@ -1,6 +1,7 @@
 import * as consts from "./consts";
 import type { OrgList } from "./types";
 
+import cheer from "./data/cheer";
 import skating from "./data/skating";
 import volleyball from "./data/volleyball";
 import track from "./data/track";
@@ -174,25 +175,6 @@ export const orgs: OrgList = [
     ],
   },
 
-  /**
-   * Cheer
-   */
-  {
-    name: "Sherwood Youth Cheer",
-    url: "http://www.sherwoodcheer.org",
-    sport: CHEER,
-    reviewed: "2022-09-28",
-    reviewNotes:
-      'Their site calendar doesn\'t work. Season dates were pulled from <a href="https://static1.squarespace.com/static/5343935be4b00493c5019003/t/62573671ad604f00b720ce48/1649882744382/parent+night+2022.1+copy.pdf">Parents night</>',
-    programs: [
-      {
-        name: "Youth Cheer",
-        season: [consts.AUG, consts.OCT],
-        gradeMin: 0,
-        gradeMax: 8,
-      },
-    ],
-  },
   /**
    * Football
    */
@@ -624,6 +606,7 @@ export const orgs: OrgList = [
   },
 ];
 
+orgs.push(...cheer);
 orgs.push(...skating);
 orgs.push(...track);
 orgs.push(...volleyball);
