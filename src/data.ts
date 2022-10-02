@@ -1,6 +1,7 @@
 import * as consts from "./consts";
 import type { OrgList } from "./types";
 
+import skating from "./data/skating";
 import volleyball from "./data/volleyball";
 import track from "./data/track";
 import ymca from "./data/ymca";
@@ -623,9 +624,10 @@ export const orgs: OrgList = [
   },
 ];
 
+orgs.push(...skating);
+orgs.push(...track);
 orgs.push(...volleyball);
 orgs.push(...ymca);
-orgs.push(...track);
 
 // Build list of sports
 const _sports = new Set<string>();
