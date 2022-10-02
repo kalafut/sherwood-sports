@@ -29,7 +29,7 @@ export const orgs: OrgList = [
   {
     name: "Sherwood Junior Baseball",
     summary:
-      "Note: some competitive tryouts can start many months in advance. Check SJB site for details.",
+      "Note: some competitive tryouts can start months in advance. Check SJB site for details.",
     url: "https://www.sherwoodjuniorbaseball.com",
     sport: BASEBALL,
     reviewed: "2022-09-28",
