@@ -11,8 +11,8 @@ export const orgs: OrgList = [
       {
         name: "Youth Track Club",
         url: "https://www.sherwoodtrack.com/youth-club",
-        gradeMin: 2,
-        gradeMax: 5,
+        gradeMin: 0,
+        gradeMax: 12,
         season: [consts.MAR, consts.JUN],
       },
       {
@@ -20,14 +20,14 @@ export const orgs: OrgList = [
         url: "https://www.sherwoodtrack.com/middle-school",
         gradeMin: 6,
         gradeMax: 8,
-        season: [consts.MAR, consts.JUN],
+        season: [consts.MAR, consts.MAY],
       },
       {
         name: "High School Track/XC",
         url: "https://www.sherwoodtrack.com/high-school",
         gradeMin: 9,
         gradeMax: 12,
-        season: [consts.MAR, consts.JUN],
+        season: [consts.MAR, consts.MAY],
       },
     ],
   },
