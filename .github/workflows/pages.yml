@@ -38,6 +38,7 @@ jobs:
       - name: Build Svelte project
         run: |
           npm install
+          npm test
           npm run build
 
       - name: Upload artifact
