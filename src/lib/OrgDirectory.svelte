@@ -23,15 +23,20 @@
     </tr>
   </thead>
   <tbody>
-    {#each orgsCopy as org}
+    {#each orgsCopy as org, idx}
       <tr>
         <td><a href={org.url} target="_blank">{org.name}</a></td>
         <td>{org.reviewed || ""}</td>
         <td>
           {#if org.reviewNotes}
-            <span data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <span
+              data-bs-toggle="modal"
+              data-bs-target={`#review-notes-${idx}`}>
               <CardText />
-              <ReviewNote title={org.name} body={org.reviewNotes} />
+              <ReviewNote
+                id={`review-notes-${idx}`}
+                title={org.name}
+                body={org.reviewNotes} />
             </span>
           {/if}
         </td>

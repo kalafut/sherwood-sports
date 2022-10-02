@@ -1,10 +1,10 @@
 <script>
-  export let title, body;
+  export let id, title, body;
 </script>
 
 <div
   class="modal fade"
-  id="exampleModal"
+  {id}
   tabindex="-1"
   aria-labelledby="exampleModalLabel"
   aria-hidden="true">
