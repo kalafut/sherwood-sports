@@ -44,6 +44,7 @@ export const orgs: OrgList = [
     name: "Portland Baseball Club",
     url: "https://www.portlandbaseballclub.com",
     sport: consts.BASEBALL,
+    location: "Tualatin",
     reviewed: "2022-10-02",
     programs: [
       {
