@@ -23,7 +23,7 @@ export const orgs: OrgList = [
         season: [consts.MAR, consts.MAY],
       },
       {
-        name: "Middleschool Cross-country
+        name: "Middleschool Cross-country",
         url: "https://www.sherwoodtrack.com/middle-school",
         gradeMin: 6,
         gradeMax: 8,
