@@ -291,6 +291,28 @@ orgs.push(
         },
       ],
     },
+    {
+      name: "MyGym",
+      url: "https://www.mygym.com/sherwood",
+      sport: GYMNASTICS,
+      reviewed: "2022-10-06",
+      programs: [
+        {
+          name: "Tumbling & Gymnastics",
+          url: "https://www.mygym.com/sherwood/schedules",
+          season: consts.ALL_YEAR,
+          ageMax: 9,
+          uAges: true,
+        },
+        {
+          name: "Ninja",
+          url: "https://www.mygym.com/sherwood/schedules",
+          season: consts.ALL_YEAR,
+          ageMin: 5,
+          ageMax: 8,
+        },
+      ],
+    },
 
     /**
      * Lacrosse
