@@ -1,11 +1,17 @@
 <script>
-  import { currentMonth, isUpcoming } from "../util";
+  import { allYear, currentMonth, isUpcoming } from "../util";
   import Season from "./Season.svelte";
   import AgeBadge from "./AgeBadge.svelte";
   import hash from "object-hash";
+  import * as consts from "../consts";
 
   const m = currentMonth();
   export let org;
+
+  const blankSeason = (prog) => {
+    const s = prog.season;
+    return s === consts.CHECK_SITE || allYear(s);
+  };
 </script>
 
 <div class="col">
@@ -33,7 +39,10 @@
           <li
             class="list-group-item d-flex align-items-start justify-content-between"
             class:list-group-item-success={isUpcoming(m, program.season)}>
-            <div class="col d-flex align-items-start justify-content-start">
+            <div
+              class:col-6={!blankSeason(program)}
+              class:col-8={blankSeason(program)}
+              class="col-6 d-flex align-items-start justify-content-start">
               {#if program.url}
                 <a
                   class="text-decoration-none"
@@ -45,7 +54,10 @@
                 {program.name}
               {/if}
             </div>
-            <div class="col d-flex align-items-start justify-content-end">
+            <div
+              class:col-6={!blankSeason(program)}
+              class:col-4={blankSeason(program)}
+              class="d-flex align-items-start justify-content-end">
               <div class="col d-flex justify-content-end">
                 <Season {program} />
               </div>
