@@ -44,4 +44,5 @@ export const LACROSSE = "Lacrosse",
   WRESTLING = "Wrestling",
   VOLLEYBALL = "Volleyball",
   TRACK = "Track & Field",
+  WATER_POLO = "Water Polo",
   __END = "";

@@ -7,6 +7,7 @@ import skating from "./data/skating";
 import swimming from "./data/swimming";
 import volleyball from "./data/volleyball";
 import track from "./data/track";
+import water_polo from "./data/water_polo";
 import ymca from "./data/ymca";
 
 const LACROSSE = "Lacrosse",
@@ -30,6 +31,7 @@ orgs.push(...skating);
 orgs.push(...swimming);
 orgs.push(...track);
 orgs.push(...volleyball);
+orgs.push(...water_polo);
 orgs.push(...ymca);
 
 orgs.push(
