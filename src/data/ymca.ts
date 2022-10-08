@@ -59,20 +59,20 @@ const baseOrgs: OrgList = [
       {
         name: "Swim Lessons",
         url: "https://www.ymcacw.org/locations/sherwood-regional-family-ymca/programs/swimming/lessons",
-        sport: SWIMMING,
+        sport: consts.SWIMMING,
         allAges: true,
         season: consts.ALL_YEAR,
       },
       {
         name: "Swim Conditioning",
         url: "https://www.ymcacw.org/locations/sherwood-regional-family-ymca/programs/aquatics",
-        sport: SWIMMING,
+        sport: consts.SWIMMING,
         season: consts.ALL_YEAR,
       },
       {
         name: "Swim League",
         url: "https://www.ymcacw.org/locations/sherwood-regional-family-ymca/programs/aquatics",
-        sport: SWIMMING,
+        sport: consts.SWIMMING,
       },
     ],
   },
