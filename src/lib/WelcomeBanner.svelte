@@ -15,9 +15,7 @@
     class="fs-5 alert alert-info alert-dismissible fade show"
     role="alert">
     <p>
-      Thanks for visiting <span class="fw-bold">Sherwood Sports</span>! The site
-      is still being built and data added, but it's ready enough for public
-      feedback.
+      Thanks for visiting <span class="fw-bold">Sherwood Sports</span>!
     </p>
     <p>
       Skim through the <a href="#about">About</a> page for an intro, or just
