@@ -4,10 +4,16 @@
   import Filter from "./Filter.svelte";
   import DirectoryHeader from "./DirectoryHeader.svelte";
   import WelcomeBanner from "./WelcomeBanner.svelte";
+  import MovingBanner from "./MovingBanner.svelte";
+
+  const currentDomain = window.location.hostname;
 </script>
 
 <div class="row">
   <div class="col">
+    {#if currentDomain === "sherwoodsports.org"}
+      <MovingBanner />
+    {/if}
     <WelcomeBanner />
     <DirectoryHeader />
     <Filter />
