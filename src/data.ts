@@ -46,7 +46,7 @@ orgs.push(
       name: "Sherwood Youth Basketball",
       sport: BASKETBALL,
       url: "https://www.sherwoodbasketball.com",
-      reviewed: "2022-09-28",
+      reviewed: "2024-08-05",
       programs: [
         {
           name: "Recreational",
