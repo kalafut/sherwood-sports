@@ -327,21 +327,21 @@ orgs.push(
       programs: [
         {
           name: "Fiddlesticks",
-          url: "http://www.sherwoodyouthlacrosse.com/Page.asp?n=107395&org=sherwoodyouthlacrosse.com",
+          url: "https://www.sherwoodyouthlacrosse.com/page/show/8011115-fiddlesticks",
           season: [consts.APR, consts.MAY],
           gradeMin: 0,
           gradeMax: 2,
         },
         {
           name: "Boy's Recreational",
-          url: "http://www.sherwoodyouthlacrosse.com/Page.asp?n=107396&org=sherwoodyouthlacrosse.com",
+          url: "https://www.sherwoodyouthlacrosse.com/page/show/8011116-boys-recreational-teams",
           gradeMin: 1,
           gradeMax: 8,
           season: [consts.MAR, consts.MAY],
         },
         {
           name: "Girl's Recreational",
-          url: "http://www.sherwoodyouthlacrosse.com/Page.asp?n=107397&org=sherwoodyouthlacrosse.com",
+          url: "https://www.sherwoodyouthlacrosse.com/page/show/8011117-girls-recreational-teams",
           gradeMin: 3,
           gradeMax: 8,
           season: [consts.MAR, consts.MAY],
