@@ -508,6 +508,7 @@ orgs.push(
           name: "Pre-Academy Development",
           url: "https://westsidemetros.org/about-us/program-overview/metros-pre-academy-development-program",
           ageMax: 6,
+          uAges: true,
           season: consts.CHECK_SITE,
         },
         {
@@ -515,6 +516,7 @@ orgs.push(
           url: "https://westsidemetros.org/about-us/program-overview/metros-academy-development-program",
           ageMin: 7,
           ageMax: 10,
+          uAges: true,
           season: consts.CHECK_SITE,
         },
         {
@@ -522,6 +524,7 @@ orgs.push(
           url: "https://westsidemetros.org/about-us/program-overview/premier-development-program-pd",
           ageMin: 9,
           ageMax: 10,
+          uAges: true,
           season: consts.CHECK_SITE,
         },
         {
@@ -529,6 +532,7 @@ orgs.push(
           url: "https://westsidemetros.org/about-us/program-overview/competitive-u11-u19",
           ageMin: 11,
           ageMax: 19,
+          uAges: true,
           season: consts.CHECK_SITE,
         },
       ],
