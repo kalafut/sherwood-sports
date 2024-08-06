@@ -471,38 +471,62 @@ orgs.push(
         },
       ],
     },
-
     {
-      name: "Westside Metros [soccer]",
-      url: "https://www.westsidetimbers.org/",
+      name: "Albion SC Portland",
+      url: "https://www.albionscportland.org",
       sport: SOCCER,
-      summary:
-        "Westside Metros (formerly Timbers) offers a large number of development and competitive programs throughout the year in Beaverton, Sherwood and Tualatin. See their site for details.",
-      reviewed: "2022-09-28",
+      summary: "Albion offers many programs and clinics throughout the year. See their site for details.",
+      reviewed: "2024-08-06",
       programs: [
         {
-          name: "Timber Tots",
-          url: "http://www.westsidetimbers.org/about-us/program-overview/timber-tots-program",
+          name: "Development",
+          url: "https://www.albionscportland.org/programs/albion-development-academy-u9-u10",
+          ageMin: 9,
+          ageMax: 10,
+          uAges: true,
+          season: consts.CHECK_SITE,
+        },
+        {
+          name: "Competitive",
+          url: "https://www.albionscportland.org/programs/competitive-u9-u19",
+          ageMin: 9,
+          ageMax: 19,
+          uAges: true,
+          season: consts.CHECK_SITE,
+        },
+      ],
+    },
+    {
+      name: "Westside Metros [soccer]",
+      url: "https://westsidemetros.org",
+      sport: SOCCER,
+      summary:
+        "Westside Metros offers a large number of development and competitive programs throughout the year in Beaverton, Sherwood and Tualatin. See their site for details.",
+      reviewed: "2024-08-06",
+      programs: [
+        {
+          name: "Pre-Academy Development",
+          url: "https://westsidemetros.org/about-us/program-overview/metros-pre-academy-development-program",
           ageMax: 6,
           season: consts.CHECK_SITE,
         },
         {
           name: "Development Program",
-          url: "http://www.westsidetimbers.org/about-us/program-overview/development-program-wdp",
+          url: "https://westsidemetros.org/about-us/program-overview/metros-academy-development-program",
           ageMin: 7,
           ageMax: 10,
           season: consts.CHECK_SITE,
         },
         {
           name: "Premier Development",
-          url: "http://www.westsidetimbers.org/about-us/program-overview/premier-development-program-pd",
+          url: "https://westsidemetros.org/about-us/program-overview/premier-development-program-pd",
           ageMin: 9,
           ageMax: 10,
           season: consts.CHECK_SITE,
         },
         {
           name: "Competitive",
-          url: "http://www.westsidetimbers.org/about-us/program-overview/competitive-u11-u19",
+          url: "https://westsidemetros.org/about-us/program-overview/competitive-u11-u19",
           ageMin: 11,
           ageMax: 19,
           season: consts.CHECK_SITE,
