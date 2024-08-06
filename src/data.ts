@@ -481,7 +481,7 @@ orgs.push(
         {
           name: "Development",
           url: "https://www.albionscportland.org/programs/albion-development-academy-u9-u10",
-          ageMin: 9,
+          ageMin: 8,
           ageMax: 10,
           uAges: true,
           season: consts.CHECK_SITE,
