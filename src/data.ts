@@ -36,9 +36,21 @@ orgs.push(...ymca);
 
 orgs.push(
   ...[
-    /**
-     * Baseball
-     */
+    {
+      name: "Chehalem Valley BMX",
+      sport: "BMX",
+      url: "https://www.chehalemvalleybmx.org/",
+      reviewed: "2024-08-06",
+      location: "Newberg",
+      programs: [
+        {
+          name: "Beginner League",
+          url: "https://www.chehalemvalleybmx.org/beginner-league",
+          season: consts.ALL_YEAR,
+          allAges: true,
+        },
+      ],
+    },
     /**
      * Basketball
      */
