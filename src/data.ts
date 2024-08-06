@@ -323,7 +323,7 @@ orgs.push(
       name: "Sherwood Youth Lacrosse",
       url: "http://www.sherwoodyouthlacrosse.com",
       sport: LACROSSE,
-      reviewed: "2022-09-28",
+      reviewed: "2024-08-06",
       programs: [
         {
           name: "Fiddlesticks",
