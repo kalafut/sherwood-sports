@@ -4,7 +4,7 @@ import type { OrgList } from "../types";
 const baseOrgs: OrgList = [
   {
     name: "i9 Sports",
-    summary: "i9 has multiple locations and schedule. See their website for details.",
+    summary: "i9 has multiple locations and schedules. See their website for details.",
     url: "https://www.i9sports.com/venues/tigard---beaverton-fowler-middle-school-youth-sports-programs/2104",
     reviewed: "2024-08-07",
     location: "Tigard",
