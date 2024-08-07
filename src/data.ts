@@ -10,6 +10,7 @@ import track from "./data/track";
 import water_polo from "./data/water_polo";
 import ymca from "./data/ymca";
 import i9 from "./data/i9";
+import chehalem from "./data/chehalem";
 
 const LACROSSE = "Lacrosse",
   // SAMPLE = "Sample",
@@ -35,6 +36,7 @@ orgs.push(...volleyball);
 orgs.push(...water_polo);
 orgs.push(...ymca);
 orgs.push(...i9);
+orgs.push(...chehalem);
 
 orgs.push(
   ...[
@@ -676,8 +678,8 @@ orgs.push(
 // Build list of sports
 const _sports = new Set<string>();
 orgs.forEach((o) => {
-  _sports.add(o.sport);
-  o.programs.forEach((p) => _sports.add(p.sport));
+  _sports.add(o.sport!);
+  o.programs.forEach((p) => _sports.add(p.sport!));
 });
 export const sports = Array.from(_sports).filter((s) => s !== undefined);
 sports.sort();
