@@ -1,20 +1,6 @@
 import * as consts from "../consts";
 import type { OrgList } from "../types";
 
-const LACROSSE = "Lacrosse",
-  // SAMPLE = "Sample",
-  BASEBALL = "Baseball",
-  BASKETBALL = "Basketball",
-  CHEER = "Cheer",
-  FOOTBALL = "Football",
-  GOLF = "Golf",
-  GYMNASTICS = "Gymnastics",
-  MARTIAL_ARTS = "Martial Arts",
-  SOCCER = "Soccer",
-  SWIMMING = "Swimming",
-  WRESTLING = "Wrestling",
-  __END = "";
-
 const baseOrgs: OrgList = [
   /**
    * Baseball
@@ -28,7 +14,7 @@ const baseOrgs: OrgList = [
       {
         name: "Basketball (Winter)",
         url: "https://www.ymcacw.org/locations/sherwood-regional-family-ymca/programs/sports/leagues",
-        sport: BASKETBALL,
+        sport: consts.BASKETBALL,
         gradeMin: 0,
         gradeMax: 2,
         season: [consts.JAN, consts.MAR],
@@ -36,7 +22,7 @@ const baseOrgs: OrgList = [
       {
         name: "Basketball (Spring)",
         url: "https://www.ymcacw.org/locations/sherwood-regional-family-ymca/programs/sports/leagues",
-        sport: BASKETBALL,
+        sport: consts.BASKETBALL,
         gradeMin: 0,
         gradeMax: 2,
         season: [consts.APR, consts.JUN],
@@ -44,14 +30,14 @@ const baseOrgs: OrgList = [
       {
         name: "T-Ball (Spring)",
         url: "https://www.ymcacw.org/locations/sherwood-regional-family-ymca/programs/sports/leagues",
-        sport: BASEBALL,
+        sport: consts.BASEBALL,
         gradeMax: 0,
         season: [consts.APR, consts.JUN],
       },
       {
         name: "Basketball (Fall)",
         url: "https://www.ymcacw.org/locations/sherwood-regional-family-ymca/programs/sports/leagues",
-        sport: BASKETBALL,
+        sport: consts.BASKETBALL,
         gradeMin: 0,
         gradeMax: 2,
         //season: [consts.APR, consts.JUN],
