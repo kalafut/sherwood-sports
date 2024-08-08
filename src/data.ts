@@ -41,6 +41,21 @@ orgs.push(...chehalem);
 orgs.push(
   ...[
     {
+      name: "George Fox Tennis Center",
+      sport: "Tennis",
+      url: "https://www.georgefoxtenniscenter.com",
+      reviewed: "2024-08-06",
+      location: "Newberg",
+      programs: [
+        {
+          name: "Tennis camps and lessons",
+          url: "https://www.georgefoxtenniscenter.com",
+          season: consts.ALL_YEAR,
+          allAges: true,
+        },
+      ],
+    },
+    {
       name: "Chehalem Valley BMX",
       sport: "BMX",
       url: "https://www.chehalemvalleybmx.org/",
